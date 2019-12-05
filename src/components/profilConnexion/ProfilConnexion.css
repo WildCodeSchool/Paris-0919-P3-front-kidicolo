@@ -1,0 +1,70 @@
+/* .containerProfilConnexion{
+    display: block;
+}
+
+.containerForm{
+    display: block;
+} */
+
+.connexionProfilInscription{
+    font-size: 20px;
+}
+
+.form{
+    align-content: center;
+    border: black;
+    background-color: #F1BF5B;
+    width: 300px;
+    margin: auto;
+    border-radius: 10px;
+    padding-top:30px;
+    padding-bottom: 30px;
+    margin-top: 40px;
+    
+}
+
+.pwForgot{
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.Connect_input{
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+
+#login-button{
+    font-family: "HelveticaNeue_Light", "sans-serif";
+    appearance: none;
+    outline: 0;
+    background-color: #C4C4C4;
+    border: 0;
+    padding: 10px 15px;
+    color: #262626;
+    border-radius: 3px;
+    width: 120px;
+    cursor: pointer;
+    font-size: 18px;
+    transition-duration: 0.25s;
+    margin-top: 10px;
+}
+
+#buttonNewUser{
+    font-family: "HelveticaNeue_Light", "sans-serif";
+    appearance: none;
+    margin-top: 30px;
+    padding: 10px 15px;
+    color: white;
+    background-color:#01445D;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    /* transition-duration: 0.25s; */
+}
+
+.logoKidicolo{
+    padding-bottom: 20px;
+}
