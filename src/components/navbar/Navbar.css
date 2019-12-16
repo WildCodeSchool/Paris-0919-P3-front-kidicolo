@@ -1,0 +1,52 @@
+.containerNavbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 10vh;
+    background: #ffffff;
+    border-top: 2px solid #bfbfbf;
+}
+
+.linkHome{
+    height: 50px;
+    width: 50px;
+    background-image: url("../../assets/img/pictoHome.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.linkSearch{
+    height: 50px;
+    width: 50px;
+    background-image: url("../../assets/img/pictosSearch.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.linkSell{
+    height: 50px;
+    width: 50px;
+    background-image: url("../../assets/img/pictosSell.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.linkMess{
+    height: 50px;
+    width: 50px;
+    background-image: url("../../assets/img/pictoMess.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.linkProfil{
+    height: 50px;
+    width: 50px;
+    background-image: url("../../assets/img/pictosProfil.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
