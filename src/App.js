@@ -6,7 +6,6 @@ import category from './components/category/Category';
 function App() {
   return (
     <div className="App">
-        <
         <Navbar />
     </div>
   );
