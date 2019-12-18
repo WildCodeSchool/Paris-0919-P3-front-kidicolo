@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Quantify";
+    src: url("./../../assets/fonts/Quantify.ttf")
+}
+
+.subcategory {
+    font-family: 'Quantify', sans-serif;
+    color:white;
+    font-size: 2vw;
+    background-color: #662381;
+}
