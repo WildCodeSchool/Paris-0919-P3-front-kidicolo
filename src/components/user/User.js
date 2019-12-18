@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import UserDisplay from "./UserDisplay"
+import { Link, withRouter } from 'react-router-dom';
 
 class User extends Component {
   state = {
@@ -23,12 +24,15 @@ class User extends Component {
       <div>
         <div className="containerUser">
           {this.state.user.map(users =>(
-            < UserDisplay users={users} key={users.id} />
+            < UserDisplay  users={users} key={users.id} />
           ))
           }
+        </div>
+        <div className="containerUserSettings"> 
+          <Link to="/settingsuser"><button>Settings</button></Link>
         </div>
       </div>
     );
   }
 }
-export default User;
+export default withRouter(User);
