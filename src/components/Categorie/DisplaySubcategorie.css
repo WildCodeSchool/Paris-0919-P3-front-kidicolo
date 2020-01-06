@@ -3,6 +3,16 @@
     src: url("./../../assets/fonts/Quantify.ttf")
 }
 
+.globalCont{
+    
+    height: 100%;
+}
+
+.containerSubcategory {
+    /* width: 100%;
+    height: 100vh; */
+}
+
 .subcategory {
     font-family: 'Quantify', sans-serif;
     color:white;
