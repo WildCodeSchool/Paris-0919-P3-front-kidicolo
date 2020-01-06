@@ -4,28 +4,30 @@ import axios from "axios";
 
 class UserSettings extends Component {
   state = {
-    firstname: null,
-    lastname: null,
-    mail: null,
-    mobile: null,
-    address: null,
-    password: null,
-    photo_user: null,
-    user : []
+  //  users:{ firstname: '',
+  //   lastname: '',
+  //   mail: '',
+  //   mobile: '',
+  //   address: '',
+  //   password: '',
+  //   photo_user: '',
+  // },
+    user: [],
   };
   /////////AXIOS GET USER /////////
   getUser() {
     axios.get(`/adduser/getinfo/21`).then(res => {
-      this.setState({ user: res.data });
+      this.setState({ user: res.data[0] });
     });
   }
   componentDidMount() {
     this.getUser();
   }
+
   ////////////FONCTION POUR RECUP LA VALUE DE NAME PUIS STOCKER DS LA STATE ////////////
-  updateField = event => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
+  handleChange(event) {
+    this.setState({ user : event.target.value });
+  }
   ///////AXIOS PUT USER /////////
   handleSubmit = e => {
     fetch("/adduser/switch/21", {
@@ -43,59 +45,60 @@ class UserSettings extends Component {
       );
     e.preventDefault();
   };
+
   /////////////////////////////////////////////////////////
   render() {
-    console.log(this.state.user)
+    console.log(this.state);
     return (
       <div>
-         
-        <form onSubmit={this.handleSubmit}>
+        <form className="formClass" onSubmit={this.handleSubmit}>
           <input
+            onChange={this.handleChange.bind(this)}
+            placeholder="Your Firstname"
             value={this.state.user.firstname}
             type="text"
             name="firstname"
-            onChange={this.updateField}
           />
           <input
-            // value={}
+            value={this.state.user.lastname}
             type="text"
             name="lastname"
-            onChange={this.updateField}
+            onChange={this.handleChange.bind(this)}
             placeholder="Your Lastname"
           />
           <input
-            // value={}
-            type="mail"
+            value={this.state.user.mail}
+            type="text"
             name="mail"
-            onChange={this.updateField}
+            onChange={this.handleChange.bind(this)}
             placeholder="Your email"
           />
           <input
-            // value={}
-            type="password"
+            value={this.state.user.password}
+            type="text"
             name="password"
-            onChange={this.updateField}
+            onChange={this.handleChange.bind(this)}
             placeholder="Your Password"
           />
           <input
-            // value={}
-            type="mobile"
+            value={this.state.user.mobile}
+            type="text"
             name="mobile"
-            onChange={this.updateField}
+            onChange={this.handleChange.bind(this)}
             placeholder="Enter your mobile number"
           />
           <input
-            // value={}
-            type="address"
+            value={this.state.user.address}
+            type="text"
             name="address"
-            onChange={this.updateField}
+            onChange={this.handleChange.bind(this)}
             placeholder="Enter your address"
           />
           <input
-            // value={}
-            type="photo_user"
+            value={this.state.user.photo_user}
+            type="text"
             name="photo_user"
-            onChange={this.updateField}
+            onChange={this.handleChange.bind(this)}
             placeholder="Enter the url of the photo"
           />
           <input className="submitButton" type="submit" value="Soumettre" />
