@@ -4,15 +4,14 @@ import axios from "axios";
 
 class UserSettings extends Component {
   state = {
-  //  users:{ firstname: '',
-  //   lastname: '',
-  //   mail: '',
-  //   mobile: '',
-  //   address: '',
-  //   password: '',
-  //   photo_user: '',
-  // },
-    user: [],
+     user:{
+    firstname: "",
+    lastname: "",
+    mail: "",
+    mobile: "",
+    address: "",
+    password: "",
+    photo_user: "",},
   };
   /////////AXIOS GET USER /////////
   getUser() {
@@ -25,8 +24,8 @@ class UserSettings extends Component {
   }
 
   ////////////FONCTION POUR RECUP LA VALUE DE NAME PUIS STOCKER DS LA STATE ////////////
-  handleChange(event) {
-    this.setState({ user : event.target.value });
+  handleChange = (event) =>  {
+    this.setState({[event.target.name]: event.target.value });
   }
   ///////AXIOS PUT USER /////////
   handleSubmit = e => {
@@ -53,7 +52,7 @@ class UserSettings extends Component {
       <div>
         <form className="formClass" onSubmit={this.handleSubmit}>
           <input
-            onChange={this.handleChange.bind(this)}
+            onChange={this.handleChange}
             placeholder="Your Firstname"
             value={this.state.user.firstname}
             type="text"
