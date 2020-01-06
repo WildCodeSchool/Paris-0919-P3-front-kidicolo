@@ -4,20 +4,21 @@ import axios from "axios";
 
 class UserSettings extends Component {
   state = {
-     user:{
     firstname: "",
     lastname: "",
     mail: "",
     mobile: "",
     address: "",
     password: "",
-    photo_user: "",},
+    photo_user: "",
   };
   /////////AXIOS GET USER /////////
   getUser() {
     axios.get(`/adduser/getinfo/21`).then(res => {
-      this.setState({ user: res.data[0] });
+      this.setState({...res.data[0] });
+      console.log(res.data[0]);
     });
+
   }
   componentDidMount() {
     this.getUser();
@@ -54,50 +55,50 @@ class UserSettings extends Component {
           <input
             onChange={this.handleChange}
             placeholder="Your Firstname"
-            value={this.state.user.firstname}
+            value={this.state.firstname}
             type="text"
             name="firstname"
           />
           <input
-            value={this.state.user.lastname}
+            value={this.state.lastname}
             type="text"
             name="lastname"
-            onChange={this.handleChange.bind(this)}
+            onChange={this.handleChange}
             placeholder="Your Lastname"
           />
           <input
-            value={this.state.user.mail}
+            value={this.state.mail}
             type="text"
             name="mail"
-            onChange={this.handleChange.bind(this)}
+            onChange={this.handleChange}
             placeholder="Your email"
           />
           <input
-            value={this.state.user.password}
+            value={this.state.password}
             type="text"
             name="password"
-            onChange={this.handleChange.bind(this)}
+            onChange={this.handleChange}
             placeholder="Your Password"
           />
           <input
-            value={this.state.user.mobile}
+            value={this.state.mobile}
             type="text"
             name="mobile"
-            onChange={this.handleChange.bind(this)}
+            onChange={this.handleChange}
             placeholder="Enter your mobile number"
           />
           <input
-            value={this.state.user.address}
+            value={this.state.address}
             type="text"
             name="address"
-            onChange={this.handleChange.bind(this)}
+            onChange={this.handleChange}
             placeholder="Enter your address"
           />
           <input
-            value={this.state.user.photo_user}
+            value={this.state.photo_user}
             type="text"
             name="photo_user"
-            onChange={this.handleChange.bind(this)}
+            onChange={this.handleChange}
             placeholder="Enter the url of the photo"
           />
           <input className="submitButton" type="submit" value="Soumettre" />
