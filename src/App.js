@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/navbar/Navbar';
-import category from './components/category/Category';
 
-function App() {
+import Categorie from './components/category/Categorie';
+
+const App = () => {
   return (
     <div className="App">
+        <Categorie />
         <Navbar />
     </div>
   );
