@@ -1,0 +1,16 @@
+.mainContainer{
+    width: 100%;
+    height: auto;
+}
+
+.kidiLogo{
+    height: 25%;
+    width: 25%;
+    /* border: solid black */
+}
+
+img.logo{
+    height: 90vh;
+    width: 120vh;
+    /* border: solid black; */
+}
