@@ -19,8 +19,8 @@ class UserSettings extends Component {
       this.setState({...res.data[0] });
       console.log(res.data[0]);
     });
-
   }
+
   componentDidMount() {
     this.getUser();
   }
@@ -80,7 +80,7 @@ class UserSettings extends Component {
           Password:
           <input
             value={this.state.password}
-            type="text"
+            type="password"
             name="password"
             onChange={this.handleChange}
             placeholder="Your Password"
