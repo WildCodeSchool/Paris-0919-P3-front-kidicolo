@@ -1,0 +1,15 @@
+.containerSettings{
+    width:auto;
+    height:100vh;
+
+}
+
+
+.formClass{
+    margin: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+

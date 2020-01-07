@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
+import "./UserSettings.css"
 
 class UserSettings extends Component {
   state = {
@@ -50,8 +51,9 @@ class UserSettings extends Component {
   render() {
     console.log(this.state);
     return (
-      <div>
+      <div className="containerSettings">
         <form className="formClass" onSubmit={this.handleSubmit}>
+        Fisrtname:
           <input
             onChange={this.handleChange}
             placeholder="Your Firstname"
@@ -59,6 +61,7 @@ class UserSettings extends Component {
             type="text"
             name="firstname"
           />
+          Lastname:
           <input
             value={this.state.lastname}
             type="text"
@@ -66,6 +69,7 @@ class UserSettings extends Component {
             onChange={this.handleChange}
             placeholder="Your Lastname"
           />
+          Email:
           <input
             value={this.state.mail}
             type="text"
@@ -73,6 +77,7 @@ class UserSettings extends Component {
             onChange={this.handleChange}
             placeholder="Your email"
           />
+          Password:
           <input
             value={this.state.password}
             type="text"
@@ -80,6 +85,7 @@ class UserSettings extends Component {
             onChange={this.handleChange}
             placeholder="Your Password"
           />
+          Mobile:
           <input
             value={this.state.mobile}
             type="text"
@@ -87,6 +93,7 @@ class UserSettings extends Component {
             onChange={this.handleChange}
             placeholder="Enter your mobile number"
           />
+          Address:
           <input
             value={this.state.address}
             type="text"
@@ -94,6 +101,7 @@ class UserSettings extends Component {
             onChange={this.handleChange}
             placeholder="Enter your address"
           />
+          Photo:
           <input
             value={this.state.photo_user}
             type="text"
@@ -101,6 +109,7 @@ class UserSettings extends Component {
             onChange={this.handleChange}
             placeholder="Enter the url of the photo"
           />
+          <img src = {this.state.photo_user} />
           <input className="submitButton" type="submit" value="Soumettre" />
         </form>
       </div>
