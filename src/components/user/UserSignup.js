@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { withRouter } from 'react-router-dom';
-import axios from "axios";
-import "./UserSettings.css"
+import {Link, withRouter } from "react-router-dom";
 
-class UserSettings extends Component {
+class UserSignup extends Component {
   state = {
     firstname: "",
     lastname: "",
@@ -13,17 +11,9 @@ class UserSettings extends Component {
     password: "",
     photo_user: "",
   };
-  /////////AXIOS GET USER /////////
-  getUser() {
-    axios.get(`/adduser/getinfo/21`).then(res => {
-      this.setState({...res.data[0] });
-      console.log(res.data[0]);
-    });
-  }
 
-  componentDidMount() {
-    this.getUser();
-  }
+
+
 
   ////////////FONCTION POUR RECUP LA VALUE DE NAME PUIS STOCKER DS LA STATE ////////////
   handleChange = (event) =>  {
@@ -31,8 +21,8 @@ class UserSettings extends Component {
   }
   ///////AXIOS PUT USER /////////
   handleSubmit = e => {
-    fetch("/adduser/switch/21", {
-      method: "PUT",
+    fetch("/adduser/signup", {
+      method: "POST",
       body: JSON.stringify(this.state),
       headers: {
         Accept: "application/json",
@@ -53,17 +43,15 @@ class UserSettings extends Component {
     return (
       <div className="containerSettings">
         <form className="formClass" onSubmit={this.handleSubmit}>
-        Fisrtname:
+        Firstname:
           <input
             onChange={this.handleChange}
             placeholder="Your Firstname"
-            value={this.state.firstname}
             type="text"
             name="firstname"
           />
           Lastname:
           <input
-            value={this.state.lastname}
             type="text"
             name="lastname"
             onChange={this.handleChange}
@@ -71,7 +59,6 @@ class UserSettings extends Component {
           />
           Email:
           <input
-            value={this.state.mail}
             type="text"
             name="mail"
             onChange={this.handleChange}
@@ -79,15 +66,21 @@ class UserSettings extends Component {
           />
           Password:
           <input
-            value={null}
             type="password"
             name="password"
             onChange={this.handleChange}
             placeholder="Your Password"
           />
+          PasswordBiss:
+          <input
+            type="password"
+            name="passwordbiss"
+            onChange={this.handleChange}
+            placeholder="Your Password"
+          />
+
           Mobile:
           <input
-            value={this.state.mobile}
             type="text"
             name="mobile"
             onChange={this.handleChange}
@@ -95,7 +88,6 @@ class UserSettings extends Component {
           />
           Address:
           <input
-            value={this.state.address}
             type="text"
             name="address"
             onChange={this.handleChange}
@@ -103,18 +95,18 @@ class UserSettings extends Component {
           />
           Photo:
           <input
-            value={this.state.photo_user}
             type="text"
             name="photo_user"
             onChange={this.handleChange}
             placeholder="Enter the url of the photo"
           />
-          <img src = {this.state.photo_user}  alt="photouser"/>
-          <input className="submitButton" type="submit" value="Soumettre" />
+          <img src = {this.state.photo_user} alt = "userphoto" />
+          <input className="submitButton" type="submit" value="Signup" />
         </form>
+        <Link to="/userlogin">I have not account ?</Link>
       </div>
     );
   }
 }
 
-export default withRouter(UserSettings);
+export default withRouter(UserSignup);
