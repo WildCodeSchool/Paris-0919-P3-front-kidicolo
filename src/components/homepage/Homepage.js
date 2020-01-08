@@ -6,25 +6,24 @@ export class Homepage extends React.Component {
     render() {
         return (
             <div className="mainContainer">
-                {/* <div className="kidiLogo">
-                    <img className="logo" src={logo} alt="Logo"/>
-                </div> */}
+               {/* <img className="logo" src={logo} alt="Logo"/> */}
+
                 <div className="box1">
-                    <h1>Vêtements</h1>
+                    <h1>Vêtements box1</h1>
                 </div>
 
                 <div className="box2">
-                    <h1>Jeux/Jouets</h1>
+                    <h1>Jeux/Jouets box2</h1>
                 </div>
 
                 <div className="box3">
-                    <h1>Education</h1>
+                    <h1>Education box3</h1>
                 </div>
 
                 <div className="box4">
-                    <h1>Puériculture</h1>
+                    <h1>Puériculture box4</h1>
                 </div>
-                
+
             </div>
         )
     }
