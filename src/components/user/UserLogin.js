@@ -5,7 +5,7 @@ import axios from "axios";
 
 class UserLogin extends Component {
   state = {
-    email: "",
+    mail: "",
     password: ""
   };
 
@@ -14,23 +14,24 @@ class UserLogin extends Component {
   }
 
   handleSubmit = (e) => {
-    axios.post("/auth/login" , {
-      email:this.state.email,
+    axios.post("adduser/login" , {
+      mail:this.state.mail,
       password: this.state.password
     }).then(res=> {
       console.log(res)
     }
       )
+      e.preventDefault();
   }
 
   render() {
     return (
       <div>
         <form className="formclass" onSubmit={this.handleSubmit}>
-        Email:
+        Mail:
           <input
             type="text"
-            name="email"
+            name="mail"
             onChange={this.handleChange}
             placeholder="Your email"
           />
