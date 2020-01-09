@@ -8,7 +8,8 @@ class Categorie extends Component {
     };
   
     getSubcategory() {
-      axios.get(`/category/subcat/1`)
+      const name = this.props.match.params.name
+      axios.get(`/subcat/${name}`)
         .then(res => {
           this.setState({ subcategory: res.data })
         });
@@ -19,7 +20,7 @@ class Categorie extends Component {
     }
   
     render() {
-      // console.log(this.state.subcategory)
+      console.log(this.state.subcategory)
       return (
         <div>
           <div className="containerSubcategory">
