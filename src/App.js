@@ -3,17 +3,32 @@ import React from 'react';
 //import components
 import Navbar from './components/navbar/Navbar';
 import Homepage from './components/homepage/Homepage';
-import Categorie from './components/category/Categorie;
+import Puericulture from './components/category/Puericulture';
+import Jeuxjouets from './components/category/Jeuxjouets';
 
 //import csss
 import './App.css';
+import { Switch, Route} from 'react-router-dom';
 
 const App = () => {
   return (
     <div className="App">
-        <Homepage />
-        <Categorie />
-        <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <Homepage />
+        </Route>
+
+        <Route path="/puericulture">
+          <Puericulture />
+        </Route>
+
+        <Route path="/jeuxjouets">
+          <Jeuxjouets />
+        </Route>
+
+      </Switch>
+
+      <Navbar />
     </div>
   );
 }

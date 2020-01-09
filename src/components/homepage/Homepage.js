@@ -2,30 +2,34 @@
 import React from 'react';
 import './Homepage.css';
 import logo from '../../assets/img/homepage/logo.png';
+import { Link, Route } from 'react-router-dom';
 
 
 export class Homepage extends React.Component {
     render() {
         return (
             <div className="mainContainer">
-               {/* <img className="logo" src={logo} alt="Logo"/> */}
-
-                <div className="box1">
+                {/* <img className="logo" src={logo} alt="Logo"/> */}
+                
+                <Link to="/puericulture"className="box1">
                     <h1>Vêtements box1</h1>
-                </div>
+                </Link>
 
-                <div className="box2">
+                <Link to="jeuxjouets"className="box2">
                     <h1>Jeux/Jouets box2</h1>
-                </div>
+                </Link>
 
-                <div className="box3">
+                <Link to="/categorie" className="box3">
                     <h1>Education box3</h1>
-                </div>
+                </Link>
 
-                <div className="box4">
+                <Link to="/categorie"className="box4">
                     <h1>Puériculture box4</h1>
+                </Link>
+                <div>
+
                 </div>
-            <div>
+            </div>
         )
     }
 }

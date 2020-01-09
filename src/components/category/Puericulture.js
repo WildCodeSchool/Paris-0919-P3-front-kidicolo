@@ -13,6 +13,28 @@ class Categorie extends Component {
           this.setState({ subcategory: res.data })
         });
     }
+
+    // getSubcategory() {
+    //   axios.get(`/category/subcat/2`)
+    //     .then(res => {
+    //       this.setState({ subcategory: res.data })
+    //     });
+    // }
+
+    // getSubcategory() {
+    //   axios.get(`/category/subcat/3`)
+    //     .then(res => {
+    //       this.setState({ subcategory: res.data })
+    //     });
+    // }
+
+    // getSubcategory() {
+    //   axios.get(`/category/subcat/4`)
+    //     .then(res => {
+    //       this.setState({ subcategory: res.data })
+    //     });
+    // }
+
     componentDidMount() {
       this.getSubcategory()
     }
