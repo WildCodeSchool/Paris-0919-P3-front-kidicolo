@@ -6,7 +6,7 @@ import axios from "axios";
 class UserLogin extends Component {
   state = {
     mail: "",
-    password: ""
+    password: "",
   };
 
   handleChange = (event) =>  {
@@ -19,12 +19,12 @@ class UserLogin extends Component {
       password: this.state.password
     }).then(res=> {
       console.log(res)
-    }
-      )
+    })
       e.preventDefault();
   }
 
   render() {
+    console.log(axios)
     return (
       <div>
         <form className="formclass" onSubmit={this.handleSubmit}>
@@ -42,7 +42,7 @@ class UserLogin extends Component {
             onChange={this.handleChange}
             placeholder="Your Password"
           />
-          <button type="submit">Log !</button>
+      <button  type="submit">Log !</button>
         </form>
       </div>
     );
