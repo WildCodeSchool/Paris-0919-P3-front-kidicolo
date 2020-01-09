@@ -8,11 +8,12 @@ class Categorie extends Component {
     };
   
     getSubcategory() {
-      axios.get(`/category/subcat/1`)
+      axios.get(`/category/subcat/3`)
         .then(res => {
           this.setState({ subcategory: res.data })
         });
     }
+
 
     componentDidMount() {
       this.getSubcategory()

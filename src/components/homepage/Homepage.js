@@ -19,7 +19,7 @@ export class Homepage extends React.Component {
                     <h1>Jeux/Jouets box2</h1>
                 </Link>
 
-                <Link to="/categorie" className="box3">
+                <Link to="/education" className="box3">
                     <h1>Education box3</h1>
                 </Link>
 
