@@ -31,6 +31,7 @@ class User extends Component {
         <div className="containerUserSettings"> 
           <Link to="/settingsuser"><button>Settings</button></Link>
           <Link to= "/usersignup"><button>Inscription</button></Link>
+          <Link to= "/homepage">go</Link>
         </div>
       </div>
     );

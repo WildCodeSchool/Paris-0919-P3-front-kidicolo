@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import axios from "axios"
-import Displaysubcategorie from "./DisplaySubcategorie"
+import Displaysubcategorie from "./Displaysubcategorie"
 
 class Categorie extends  Component {
     state = {
@@ -9,6 +9,8 @@ class Categorie extends  Component {
   
     getSubcategory() {
       axios.get(`/category/subcat/1`)
+      const name = this.props.match.params.name
+      axios.get(`category/subcat/${name}`)
         .then(res => {
           this.setState({ subcategory: res.data })
         });
@@ -18,7 +20,7 @@ class Categorie extends  Component {
     }
   
     render() {
-      // console.log(this.state.subcategory)
+      console.log(this.state.subcategory)
       return (
         <div>
           <div className="containerSubcategory">
