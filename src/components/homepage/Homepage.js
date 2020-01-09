@@ -1,6 +1,8 @@
+
 import React from 'react';
 import './Homepage.css';
 import logo from '../../assets/img/homepage/logo.png';
+
 
 export class Homepage extends React.Component {
     render() {
@@ -23,8 +25,7 @@ export class Homepage extends React.Component {
                 <div className="box4">
                     <h1>Puériculture box4</h1>
                 </div>
-
-            </div>
+            <div>
         )
     }
 }
