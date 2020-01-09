@@ -11,15 +11,15 @@ export class Homepage extends React.Component {
             <div className="mainContainer">
                 {/* <img className="logo" src={logo} alt="Logo"/> */}
                 
-                <Link to="/puericulture"className="box1">
+                <Link to="/categorie"className="box1">
                     <h1>Vêtements box1</h1>
                 </Link>
 
-                <Link to="jeuxjouets"className="box2">
+                <Link to="/categorie"className="box2">
                     <h1>Jeux/Jouets box2</h1>
                 </Link>
 
-                <Link to="/education" className="box3">
+                <Link to="/categorie" className="box3">
                     <h1>Education box3</h1>
                 </Link>
 

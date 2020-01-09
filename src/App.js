@@ -3,9 +3,7 @@ import React from 'react';
 //import components
 import Navbar from './components/navbar/Navbar';
 import Homepage from './components/homepage/Homepage';
-import Puericulture from './components/category/Puericulture';
-import Jeuxjouets from './components/category/Jeuxjouets';
-import Education from './components/category/Education';
+import Categorie from './components/category/Categorie';
 
 //import csss
 import './App.css';
@@ -19,17 +17,8 @@ const App = () => {
           <Homepage />
         </Route>
 
-        <Route path="/puericulture">
-          <Puericulture />
-        </Route>
-
-        <Route path="/jeuxjouets">
-          <Jeuxjouets />
-        </Route>
-
-
-        <Route path="/education">
-          <Education />
+        <Route path="/categorie">
+          <Categorie />
         </Route>
 
       </Switch>
