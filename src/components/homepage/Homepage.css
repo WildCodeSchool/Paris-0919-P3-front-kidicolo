@@ -1,0 +1,47 @@
+.mainContainer {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* couleurs des grids */
+
+.box1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background: lightcoral;
+}
+
+.box2 {
+    background: lightsalmon;
+}
+
+.box3 {
+    grid-column: 1/2;
+    background: lightskyblue;
+}
+
+.box4 {
+    background-color: lightslategrey;
+}
+
+/*Ici je vais gérer mes grids*/
+
+
+/* CSS LOGO à faire plus tard après le placement des boutons */
+
+
+/* .kidiLogo {
+    height: 25%;
+    width: 25%;
+    border: solid black
+} 
+
+*/
+
+/* img.logo {
+    height: 30vh;
+    width: 30vh;
+    border: solid black;
+} */
