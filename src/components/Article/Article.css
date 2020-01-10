@@ -6,3 +6,22 @@
     width: auto;
     height: 180px;
 }
+
+.btnArticle {
+    
+    margin-top: auto;
+    
+    background: #662381;
+    color: #ffffff;
+}
+
+.btnArticle:hover {
+    background: #ffffff;
+    color: #662381;
+    border: 1px solid #662381;
+}
+
+.card-title {
+    color: #662381;
+}
+
