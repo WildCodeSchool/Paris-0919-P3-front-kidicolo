@@ -14,9 +14,26 @@
     padding: 1%;
 }
 
-/*Removing the decoration*/
+/*hover*/
+.box0:hover{
+    background-color: grey;
+ }
 
-a {
+.box1:hover{
+    background-color: grey;
+ }
+
+.box2:hover{
+    background-color: grey;
+ }
+
+.box3:hover{
+    background-color: grey;
+ }
+
+ /*Removing the decoration*/
+
+a{
     text-decoration: none;
 }
 
