@@ -21,7 +21,7 @@ import { NavLink } from "react-router-dom";
 
 /// possibilité de stylisé chaque  Link  suppression du map)
 const Homepage = () => {
-  const id = ["Vetements", "Puericulture", "Jeux&Jouets", "Education"];
+  const id = ["Vetements", "Puericulture", "Jeux & Jouets", "Education"];
   return (
     <div className="mainContainer">
        {id.map((id, index) => {

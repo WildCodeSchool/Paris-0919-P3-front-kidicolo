@@ -1,11 +1,26 @@
+@font-face {
+    font-family: "Quantify";
+    src: url("../../assets/fonts/Quantify.ttf") format("ttf"),
+}
+
 .mainContainer {
     height: 90vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    font-family: "Quantify", serif;
+    grid-column-gap: 1%;
+    grid-row-gap: 1%;
+    padding: 1%;
 }
 
-/* couleurs des grids */
+/*Removing the decoration*/
+
+a {
+    text-decoration: none;
+}
+
+/* couleurs des grids et ajustements des grids*/
 
 .box0 {
     grid-column: 1/2;
@@ -16,6 +31,8 @@
     padding-top: 131px;
     padding-bottom: 131px;
     color: white;
+    border-radius: 1%;
+    font-size: 1.2em;
 }
 
 .box1 {
@@ -25,6 +42,8 @@
     padding-top: 131px;
     padding-bottom: 131px;
     color: white;
+    border-radius: 1%;
+    font-size: 1.2em;
 }
 
 .box2 {
@@ -35,6 +54,8 @@
     padding-top: 131px;
     padding-bottom: 131px;
     color: white;
+    border-radius: 1%;
+    font-size: 1.2em;
 }
 
 .box3 {
@@ -44,6 +65,8 @@
     padding-top: 131px;
     padding-bottom: 131px;
     color: white;
+    border-radius: 1%;
+    font-size: 1.2em;
 }
 
 #textStyleHomepage {
@@ -54,16 +77,14 @@
 
 /* CSS LOGO à faire plus tard après le placement des boutons */
 
-/* .kidiLogo {
+.kidiLogo {
     height: 25%;
     width: 25%;
     border: solid black
-} 
+}
 
-*/
-
-/* img.logo {
+img.logo {
     height: 30vh;
     width: 30vh;
     border: solid black;
-} */
+}
