@@ -10,32 +10,49 @@
 .box0 {
     grid-column: 1/2;
     grid-row: 1/2;
-    background:#e50f51;
+    background: #e50f51;
+    /*height : 40px;*/
+    text-align: center;
+    padding-top: 131px;
+    padding-bottom: 131px;
+    color: white;
 }
 
 .box1 {
     background: #662381;
+    /*height : 40px;*/
+    text-align: center;
+    padding-top: 131px;
+    padding-bottom: 131px;
+    color: white;
 }
 
 .box2 {
     grid-column: 1/2;
     background: #662381;
+    /*height : 40px;*/
+    text-align: center;
+    padding-top: 131px;
+    padding-bottom: 131px;
+    color: white;
 }
 
 .box3 {
     background-color: #e50f51;
+    /*height : 40px;*/
+    text-align: center;
+    padding-top: 131px;
+    padding-bottom: 131px;
+    color: white;
 }
 
-#textStyleHomepage{
+#textStyleHomepage {
     text-align: center;
 }
 
-
 /*Ici je vais gérer mes grids*/
 
-
 /* CSS LOGO à faire plus tard après le placement des boutons */
-
 
 /* .kidiLogo {
     height: 25%;
