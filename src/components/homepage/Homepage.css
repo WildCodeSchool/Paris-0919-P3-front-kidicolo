@@ -1,5 +1,5 @@
 .mainContainer {
-    height: 100vh;
+    height: 90vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -7,24 +7,27 @@
 
 /* couleurs des grids */
 
-.box1 {
+.box0 {
     grid-column: 1/2;
     grid-row: 1/2;
     background: lightcoral;
-
 }
 
-.box2 {
+.box1 {
     background: lightsalmon;
 }
 
-.box3 {
+.box2 {
     grid-column: 1/2;
     background: lightskyblue;
 }
 
-.box4 {
+.box3 {
     background-color: lightslategrey;
+}
+
+#textStyleHomepage{
+    text-align: center;
 }
 
 /*Ici je vais gérer mes grids*/
