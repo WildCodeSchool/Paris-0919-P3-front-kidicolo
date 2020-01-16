@@ -2,24 +2,7 @@ import React from "react";
 import "./Homepage.css";
 import { NavLink } from "react-router-dom";
 
-// const Homepage = () => {
-//   const ids = ["Vetements", "Puericulture", "Jeux&Jouets", "Education"];
-//   return (
-//     <div className="mainContainer">
-//       {ids.map(id => {
-//         return (
-//           <div>
-//             <Link to={`/categorie/${id}`}>
-//               <h1>{id}</h1>
-//             </Link>
-//           </div>
-//         );
-//       })}
-//     </div>
-//   );
-// };
 
-/// possibilité de stylisé chaque  Link  suppression du map)
 const Homepage = () => {
   const id = ["Vetements", "Puericulture", "Jeux&Jouets", "Education"];
   return (
@@ -27,7 +10,7 @@ const Homepage = () => {
        {id.map((id, index) => {
         return (
           <NavLink className={`box${index}`} to={`/categorie/${id}`}>
-            <h1>{id}</h1>
+            <h3>{id}</h3>
           </NavLink>
         );
       })}

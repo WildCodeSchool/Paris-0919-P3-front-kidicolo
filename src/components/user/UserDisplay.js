@@ -1,18 +1,35 @@
-import React from 'react';
-import './UserDisplay.css'
+import React from "react";
+import "./usercss/UserDisplay.css";
+import { Link } from "react-router-dom";
+import logo from "../../assets/img/homepage/logo.png"
 
 const UserDisplay = users => {
-    console.log(users)
-     return (
-         <div className="containerUser">
-                <img src = {users.users.photo_user} alt="lol"/>
-                <p>{users.users.firstname} {users.users.lastname}</p> 
-                <p>{users.users.address}</p>
-                <p>{users.users.mobile}</p>
-                <p>{users.users.mail}</p>
+  console.log(users);
+  return (
+    <div className="containerUserDisplay">
+      <img className = "logoKidicolo" src  = {logo} alt="Logokidicolo" />
+      <div className="formClassUser">
+        <img
+          className="imgUserProfile"
+          src={users.users.photo_user}
+          alt="lol"
+        />
+        <h1>
+          Bonjour !
+          <br></br>
+          {users.users.firstname} {users.users.lastname}
+        </h1>
+        <div className="buttonUserProfile">
+        <Link to="/settingsuser">
+          <button className="buttonSetting"></button>
+        </Link>
+        <Link to="/userarticle">
+          <button className="buttonArticle"></button>
+        </Link>
         </div>
-     )
-}
+      </div>
+    </div>
+  );
+};
 
-
-export default UserDisplay
+export default UserDisplay;

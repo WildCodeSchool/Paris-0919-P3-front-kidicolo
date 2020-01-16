@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
-import "./UserSettings.css";
+import { withRouter, Link } from "react-router-dom";
+import "./usercss/UserLogin.css"
 import axios from "axios";
 
 class UserLogin extends Component {
@@ -27,7 +27,7 @@ class UserLogin extends Component {
     console.log(axios)
     return (
       <div>
-        <form className="formclass" onSubmit={this.handleSubmit}>
+        <form className="formClassLogin" onSubmit={this.handleSubmit}>
         Mail:
           <input
             type="text"
@@ -42,7 +42,8 @@ class UserLogin extends Component {
             onChange={this.handleChange}
             placeholder="Your Password"
           />
-      <button  type="submit">Log !</button>
+      <Link to="/user"><button  type="submit">Log !</button></Link>
+      <Link to="/usersignup"><button> I have not account ?</button></Link>
         </form>
       </div>
     );

@@ -1,0 +1,70 @@
+@font-face{font-family: "Roboto" ;
+    src:url("../../../assets/fonts/Roboto-Bold.ttf");}
+
+.containerUserDisplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(0.25turn,#e50f51,#662381);
+    height: 75vh;
+    width: 90vw;
+    margin: auto;
+    margin-top: 25%;
+    border: 5px solid black;
+    border-radius: 30px;
+    box-shadow: 10px 5px 5px grey ;
+    font-family: "Roboto";
+ }
+ .formClassUser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.imgUserProfile{
+    border : 4px solid black;
+    max-width: 60%;
+    max-height: 25%;
+    border-radius: 30px;
+    margin-bottom: 20%;
+}
+
+
+
+.buttonSetting{
+    background: url("../../.././assets/img/user/settings.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height:60px;
+    width:60px;
+    border:none;
+    pointer-events: painted;
+}
+.buttonArticle{
+    background: url("../../../assets/img//user/dress.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height:60px;
+    width:70px;
+    border:none;
+    display: flex;
+}
+
+.buttonUserProfile{
+    width: 104%;
+    display:flex;
+    justify-content:space-between;
+    flex-direction: row;
+    margin-top: 64%;
+}
+
+.logoKidicolo{
+height: 22%;
+width: 70%;
+position: absolute;
+bottom: 83%;
+}
+

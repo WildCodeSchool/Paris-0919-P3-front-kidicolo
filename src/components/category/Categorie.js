@@ -7,29 +7,6 @@ class Categorie extends Component {
     subcategory: []
   };
 
-  // getSubcategory() {
-  //   console.log(this);
-
-  //   const { match: { params } } = this.props;
-  //   let url = 0;
-  //   if(params.id === "Vetements"){
-  //     url = 3
-  //   }
-  //   if(params.id === "Puericulture"){
-  //     url = 1
-  //   }
-  //   if(params.id === "Jeux&Jouets"){
-  //     url = 2
-  //   }
-  //   if(params.id === "Education"){
-  //     url = 4
-  //   }
-  //   axios.get(`/subcategory/${url}`)
-  //     .then(res => {
-  //       this.setState({ subcategory: res.data })
-  //     });
-  // }
-
   getSubcategory() {
     const {
       match: { params }
@@ -51,7 +28,7 @@ class Categorie extends Component {
         url = 4;
         break;
       default:
-        console.log("pas bien");
+        console.log("Badest things");
       }
           axios.get(`/subcategory/${url}`).then(res => {
             this.setState({ subcategory: res.data });

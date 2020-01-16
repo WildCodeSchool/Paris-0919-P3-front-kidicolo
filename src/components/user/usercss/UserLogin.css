@@ -1,0 +1,17 @@
+@font-face{font-family: "Roboto" ;
+    src:url("../../../assets/fonts/Roboto-Bold.ttf");}
+
+.containerSettings{
+    width:auto;
+    height:100vh;
+
+}
+
+
+.formClassLogin{
+    margin: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
