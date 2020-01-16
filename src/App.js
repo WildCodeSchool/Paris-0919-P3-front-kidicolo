@@ -10,7 +10,6 @@ import UserLogin from "./components/user/UserLogin";
 import Homepage from "./components/homepage/Homepage";
 import Categorie from "./components/category/Categorie";
 import DisplaySub from "./components/category/DisplaySub";
-import searchBar from "./components/searchbar/Searchbar"
 import Article from "./components/articles/Article"
 //Import css
 import "./App.css";
@@ -18,7 +17,6 @@ import "./App.css";
 const App = () => {
   return (
     <div className="App">
-<<<<<<< HEAD
       <BrowserRouter>
       <Navbar />
         <Switch>
@@ -32,11 +30,6 @@ const App = () => {
           <Route path="/displayarticle/:id" component={Article} />
         </Switch>
       </BrowserRouter>
-=======
-        <Searchbar />
-        {/* < BodyData /> */}
-        <Navbar />
->>>>>>> searchBar
     </div>
   );
 };
