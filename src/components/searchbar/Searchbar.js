@@ -8,9 +8,6 @@ class Searchbar extends React.Component {
         isClicked: false
     }
 
-
-
-
     onSearchChange = event => {
         if (event.target.value.length === 0) {
             this.setState({ article: [] })
@@ -18,7 +15,8 @@ class Searchbar extends React.Component {
             axios
                 .get(`http://localhost:2121/article/article/${event.target.value}`)
                 .then((res) => {
-                    this.setState({ article: res.data.article })
+                    this.setState({ article: res.data })
+                    console.log("article :",this.state.article)
                     return res
                 })
                 
@@ -53,7 +51,7 @@ class Searchbar extends React.Component {
                     class="searchTerm"
                     placeholder="recherche"
                     onChange={this.onSearchChange}
-                    onClick={this.handleClick}
+                    // onClick={this.handleClick}
                 />
             </div>
             
