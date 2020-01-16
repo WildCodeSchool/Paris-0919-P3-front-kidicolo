@@ -1,0 +1,43 @@
+@font-face{font-family: "Roboto" ;
+    src:url("../../../assets/fonts/Roboto-Bold.ttf");}
+
+@font-face{font-family: "RobotoMedium" ;
+    src:url("../../../assets/fonts/Roboto-Medium.ttf");}
+
+    @font-face{font-family: "RobotoLight" ;
+        src:url("../../../assets/fonts/Roboto-Light.ttf");}
+
+
+        
+.logoK{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 70px;
+}
+
+.containerSettingsSignUp{
+    display: flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.formClassSignUp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "RobotoMedium";
+    color: #662381;
+    flex-direction: column;
+    font-size: 1.4em;
+}
+
+.inputSignUp {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: #662381  solid 3px;
+    font-size: 0.5em;
+    background-color: rgba(255, 255, 255, 0);
+}

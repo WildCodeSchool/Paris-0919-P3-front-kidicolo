@@ -1,17 +1,94 @@
 @font-face{font-family: "Roboto" ;
     src:url("../../../assets/fonts/Roboto-Bold.ttf");}
 
-.containerSettings{
-    width:auto;
+@font-face{font-family: "RobotoMedium" ;
+    src:url("../../../assets/fonts/Roboto-Medium.ttf");}
+
+    @font-face{font-family: "RobotoLight" ;
+        src:url("../../../assets/fonts/Roboto-Light.ttf");}
+
+.logoK{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 70px;
+}
+    
+.containerLogin{
+    display: flex;
     height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.formClassLogin{
+    display: flex;
+    justify-content: center;
+    color: #662381;
+    font-family: "RobotoMedium";
+    flex-direction: column;
+    font-size: 1.4em;
+}
+
+.inputLogin {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: #662381  solid 3px;
+    font-size: 1.1em;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.btnSeconnecter {
+    
+    font-family: "RobotoLight";
+    background-color: #ffffff;
+    font-size: 0.9em;
+    border: #662381  solid 2px;
+    border-radius: 5px;
+    padding: 5px 55px;
+    display: flex;
+    color: #262626;
+    margin: auto;
+    margin-bottom: 10px;
 
 }
 
+.btnSeconnecter:active {
+    font-family: "RobotoLight";
+    background-color: #662381;
+    color: #ffffff;
+    font-size: 0.9em;
+    border: #662381  solid 2px;
+    border-radius: 5px;
+    padding: 5px 55px;
 
-.formClassLogin{
-    margin: 7%;
+}
+
+.btnPasDeCompte{
+    color: #262626;
+    font-family: "RobotoLight";
+    background-color: #ffffff;
+    font-size: 0.9em;
+    border: #662381  solid 2px;
+    border-radius: 5px;
+    padding: 5px 15px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    margin: auto; 
+}
+
+.btnPasDeCompte:active {
+    font-family: "RobotoLight";
+    background-color: #662381;
+    color: #ffffff;
+    font-size: 0.9em;
+    border: #662381  solid 2px;
+    border-radius: 5px;
+    padding: 5px 15px;
+
+}
+
+a{
+    text-decoration: none;
 }

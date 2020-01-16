@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import {Link, withRouter } from "react-router-dom";
+import Logo from '../../assets/img/logo/logoK.png'
+import './usercss/UserSignup.css'
 
 class UserSignup extends Component {
   state = {
@@ -11,9 +13,6 @@ class UserSignup extends Component {
     password: "",
     photo_user: "",
   };
-
-
-
 
   ////////////FONCTION POUR RECUP LA VALUE DE NAME PUIS STOCKER DS LA STATE ////////////
   handleChange = (event) =>  {
@@ -41,69 +40,78 @@ class UserSignup extends Component {
   render() {
     console.log(this.state);
     return (
-      <div className="containerSettings">
-        <form className="formClass" onSubmit={this.handleSubmit}>
-        Firstname:
+      <div className="containerSettingsSignUp">
+        <img src={Logo} className="logoK" />
+        <form className="formClassSignUp" onSubmit={this.handleSubmit}>
+        Prénom
           <input
+            className='inputSignUp'
             onChange={this.handleChange}
-            placeholder="Your Firstname"
+            placeholder="Ton prénom…"
             type="text"
             name="firstname"
           />
-          Lastname:
+          Nom
           <input
+            className='inputSignUp'
             type="text"
             name="lastname"
             onChange={this.handleChange}
-            placeholder="Your Lastname"
+            placeholder="Ton nom…"
           />
-          Email:
+          Email
           <input
+            className='inputSignUp'
             type="text"
             name="mail"
             onChange={this.handleChange}
-            placeholder="Your email"
+            placeholder="Ton email…"
           />
-          Password:
+          Mot de passe
           <input
+            className='inputSignUp'
             type="password"
             name="password"
             onChange={this.handleChange}
-            placeholder="Your Password"
+            placeholder="Ton Mot de passe…"
           />
-          PasswordBiss:
+          Mot de passe*
           <input
+            className='inputSignUp'
             type="password"
             name="passwordbiss"
             onChange={this.handleChange}
-            placeholder="Your Password"
+            placeholder="Confirmer Mot de passe…"
           />
 
-          Mobile:
+          Portable:
           <input
+            className='inputSignUp'
             type="text"
             name="mobile"
             onChange={this.handleChange}
-            placeholder="Enter your mobile number"
+            placeholder="Ton numéro de portable…"
           />
-          Address:
+          Addresse
           <input
+            className='inputSignUp'
             type="text"
             name="address"
             onChange={this.handleChange}
-            placeholder="Enter your address"
+            placeholder="Ton adresse…"
           />
-          Photo:
+          Photo de profil
           <input
+            className='inputSignUp'
             type="text"
             name="photo_user"
             onChange={this.handleChange}
-            placeholder="Enter the url of the photo"
+            placeholder="Ton url de votre photo de profil…"
           />
           <img src = {this.state.photo_user} alt = "userphoto" />
-          <input className="submitButton" type="submit" value="Signup" />
+          <input className="submitButton" type="submit" value="Se connecter" />
+        <Link to="/"><button>J'ai un compte!</button></Link>
         </form>
-        <Link to="/"><button>I have an account !</button></Link>
       </div>
     );
   }
