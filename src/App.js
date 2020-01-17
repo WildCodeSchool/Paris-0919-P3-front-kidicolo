@@ -10,7 +10,8 @@ import UserLogin from "./components/user/UserLogin";
 import Homepage from "./components/homepage/Homepage";
 import Categorie from "./components/category/Categorie";
 import DisplaySub from "./components/category/DisplaySub";
-import Article from "./components/articles/Article"
+import Article from "./components/articles/Article";
+
 //Import css
 import "./App.css";
 
@@ -18,6 +19,7 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
+      
       <Navbar />
         <Switch>
           <Route exact path="/" component={UserLogin} />

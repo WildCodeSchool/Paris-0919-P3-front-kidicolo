@@ -1,34 +1,167 @@
+@font-face{font-family: "Roboto" ;
+    src:url("../../../src/assets/fonts/Roboto-Bold.ttf");}
+
+
+@font-face{font-family: "Quantify" ;
+    src:url("../../../src/assets/fonts/Quantify-Bold.ttf");} 
+    
+    
+/* @font-face{font-family: "RobotoMedium" ;
+    src:url("../../../assets/fonts/Roboto-Medium.ttf");}
+
+@font-face{font-family: "RobotoLight" ;
+    src:url("../../../assets/fonts/Roboto-Light.ttf");}
+  */
+
+
 .mainContainer {
-    height: 90vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 /* couleurs des grids */
 
 .box0 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    background: lightcoral;
+    width: 50%;
+    background:  rgb(103, 159, 114);
+    background-image: url('../../assets/img/homepage/ClothesWhite.svg');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position-x: center;
+    background-position-y: center;
+    margin: 10px 10px;
+    border-radius: 5px;
+    
+}
+
+.box0:hover {
+
+    box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+-moz-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+-webkit-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+}
+
+
+.box0:active {
+    width: 50%;
+    background:  rgb(103, 159, 114);
+    background-image: url('../../assets/img/homepage/Clothes.svg');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position-x: center;
+    background-position-y: center;
+    background-position-y: center;
+    margin: 10px 10px;
+    border-radius: 5px;
 }
 
 .box1 {
-    background: lightsalmon;
+    background-repeat: no-repeat;
+    width: 50%;
+    background: lightcoral;
+    background-image: url('../../assets/img/homepage/childFriendlyWhite.svg');
+    background-size: 30%;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+
+.box1:active {
+    background-repeat: no-repeat;
+    width: 50%;
+    background: lightcoral;
+    background-image: url('../../assets/img/homepage/childFriendly.svg');
+    background-size: 30%;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    margin: 10px 10px;
+    border-radius: 5px;
 }
 
 .box2 {
-    grid-column: 1/2;
-    background: lightskyblue;
+    width: 50%;
+    background:  lightsalmon;
+    background-image: url('../../assets/img/homepage/bearWhite.svg');
+    background-size: 30%;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+
+.box2:active {
+    width: 50%;
+    background:  lightsalmon;
+    background-image: url('../../assets/img/homepage/bear.svg');
+    background-size: 30%;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    margin: 10px 10px;
+    border-radius: 5px;
 }
 
 .box3 {
+    width: 50%;
     background-color: lightslategrey;
+    background-image: url('../../assets/img/homepage/BookWhite.svg');
+    background-size: 30%;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+
+.box3:active {
+    width: 50%;
+    background-color: lightslategrey;
+    background-image: url('../../assets/img/homepage/Book.svg');
+    background-size: 30%;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    margin: 10px 10px;
+    border-radius: 5px;
 }
 
 #textStyleHomepage{
     text-align: center;
+    
 }
+
+.NavlinksCategorie{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    align-items: flex-end;
+    padding-bottom: 60px;
+    font-family: "Quantify";
+    color: #ffffff;
+}
+
+.NavlinksCategorie:hover{
+    text-decoration: none;
+}
+
+.NavlinksCategorie:active{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    
+    
+    
+}
+
+
+
 
 /*Ici je vais gérer mes grids*/
 
@@ -49,3 +182,4 @@
     width: 30vh;
     border: solid black;
 } */
+

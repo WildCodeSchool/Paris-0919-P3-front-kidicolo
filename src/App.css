@@ -1,1 +1,11 @@
 
+/* ----Don't touch this css, it's for bootstrap---- */
+
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+};
+
