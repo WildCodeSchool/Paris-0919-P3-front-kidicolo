@@ -1,58 +1,66 @@
-/* .dropdown-menu {
-    position: relative;
-    margin-top: 30px;
-    padding: 20px;
+@font-face {
+    font-family: "Quantify";
+    src: url("../../assets/fonts/Quantify.ttf") format("ttf"),
+}
+
+.list {
+    font-family: "Quantify", serif;
+}
+
+.formfield-select {
+	position: relative;
+}
+
+.formfield-select--container {
+	position: relative; 
+	
+	background-color: #fff;
+	border: #777 1px solid;
+	margin: auto;
     width: 50%;
-    background-color: blue;
-    border-radius: 100px;
+	overflow: hidden; 
+	/* 
+		Le select natif pourra 
+		dépasser sans être vu 
+	*/
 }
 
-list:active {
-    width: 100%;
-    border-radius: 100px;
-    left: 0;
-    top: 100%;
-    background-color: #ffffff;
-} */
+.formfield-select--container select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none; 
+	/* 
+		On est sûr de ne plus voir
+		la flèche native 
+	*/
+	
+	height: auto;
+	border: 0; 
+	padding: .75em;
+	border-radius: 0;
+	
 
-.select-style {
-    padding: 0;
-    margin: 0;
-    border: 1px solid #ccc;
-    width: 120px;
-    border-radius: 3px;
-    overflow: hidden;
-    background-color: #fff;
-    background: #fff;
-    position: relative;
-}
-.select-style select {
-    padding: 5px 8px;
-    width: 130%;
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-    background-image: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-.select-style:after {
-    top: 50%;
-    left: 85%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(0, 0, 0, 0);
-    border-top-color: #000000;
-    border-width: 5px;
-    margin-top: -2px;
-    z-index: 100;
-}
-.select-style select:focus {
-    outline: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/* 
+		On empêche le texte d'aller
+		jusqu'au bout s'il est trop long
+	*/
+
 }
 
+.formfield-select--container::after { 
+	/* Le pointeur du select */
+	content: '';
+	position: absolute;
+	top: 50%; 
+	margin-top: -3px;
+	right: .75em;  
+	display: block; 
+	width: 0; height: 0;
+	border-color: transparent;
+	border-top-color: #444; 
+	border-width: 6px;
+	border-style: solid;
+	pointer-events: none;
+}

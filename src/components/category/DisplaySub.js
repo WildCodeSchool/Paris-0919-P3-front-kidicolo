@@ -38,9 +38,10 @@ const DisplaySub = ({ subcategorys }) => {
             </Link>
           </div> */}
 
-    <div className="dropdown-container dropdown-solid">
-      <div className="dropdown-toggle click-dropdown">Choisissez</div>
-      <select className="dropdown-menu" onChange={(e) => handleChange(e)}>
+    <div className="formfield-select">
+      <label for="select">Choisissez</label>
+      <div className="formfield-select--container">
+      <select id="select" onChange={(e) => handleChange(e)}>
         {subcategorys && subcategorys.map(subCat => {
           return(
             <>
@@ -50,6 +51,7 @@ const DisplaySub = ({ subcategorys }) => {
         })}
 
       </select> 
+      </div>
                 {/* <input type="button" value="Valider" onClick={() => setChosen(true)} /> */}
     </div>
     </div>
