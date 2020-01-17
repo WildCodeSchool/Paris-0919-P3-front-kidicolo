@@ -35,9 +35,72 @@
 
 .inputSignUp {
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border-radius: 5px;
     border: #662381  solid 3px;
-    font-size: 0.5em;
+    font-size: 1em;
     background-color: rgba(255, 255, 255, 0);
 }
+
+.btnSeconnecterSignUp {
+    
+    font-family: "RobotoLight";
+    background-color: #ffffff;
+    font-size: 0.9em;
+    border: #662381  solid 2px;
+    border-radius: 5px;
+    padding: 5px 30px;
+    display: flex;
+    color: #262626;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+
+.btnSeconnecterSignUp:active {
+    font-family: "RobotoLight";
+    background-color: #662381;
+    color: #ffffff;
+    font-size: 0.9em;
+    border: #662381  solid 2px;
+    border-radius: 5px;
+}
+
+
+.btnSeconnecterjaiCompte {
+    
+    font-family: "RobotoLight";
+    background-color: #ffffff;
+    font-size: 0.9em;
+    border: #662381  solid 2px;
+    border-radius: 5px;
+    padding: 5px 22px;
+    display: flex;
+    color: #262626;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.btnSeconnecterjaiCompte:active {
+    font-family: "RobotoLight";
+    background-color: #662381;
+    color: #ffffff;
+    font-size: 0.9em;
+    border: #662381  solid 2px;
+    border-radius: 5px;
+}
+
+.containerBtnSignUp {
+    display: flex;
+}
+
+.photoProfilUser {
+    position: absolute;
+    top: 20px;
+    right: 5%;
+    height: 100px;
+    border-radius: 100%;
+}
+

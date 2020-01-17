@@ -29,7 +29,7 @@ class UserLogin extends Component {
     return (
       
       <div className="containerLogin">
-        <img src={Logo} className="logoK" />
+        <img src={Logo} className="logoK" alt="Logo Kidicolo" />
         <form className="formClassLogin" onSubmit={this.handleSubmit}>
         Mail
           <input className="inputLogin"

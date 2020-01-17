@@ -41,76 +41,70 @@ class UserSignup extends Component {
     console.log(this.state);
     return (
       <div className="containerSettingsSignUp">
-        <img src={Logo} className="logoK" />
+        <img src={Logo} className="logoK" alt="Logo Kidicolo" />
         <form className="formClassSignUp" onSubmit={this.handleSubmit}>
-        Prénom
+        <img src = {this.state.photo_user} className="photoProfilUser" />
+        
           <input
             className='inputSignUp'
             onChange={this.handleChange}
-            placeholder="Ton prénom…"
+            placeholder="Prénom…"
             type="text"
             name="firstname"
           />
-          Nom
+          
           <input
             className='inputSignUp'
             type="text"
             name="lastname"
             onChange={this.handleChange}
-            placeholder="Ton nom…"
+            placeholder="Nom…"
           />
-          Email
+          
           <input
             className='inputSignUp'
             type="text"
             name="mail"
             onChange={this.handleChange}
-            placeholder="Ton email…"
+            placeholder="Email…"
           />
-          Mot de passe
+          
           <input
             className='inputSignUp'
             type="password"
             name="password"
             onChange={this.handleChange}
-            placeholder="Ton Mot de passe…"
+            placeholder="Mot de passe…"
           />
-          Mot de passe*
-          <input
-            className='inputSignUp'
-            type="password"
-            name="passwordbiss"
-            onChange={this.handleChange}
-            placeholder="Confirmer Mot de passe…"
-          />
-
-          Portable:
+          
           <input
             className='inputSignUp'
             type="text"
             name="mobile"
             onChange={this.handleChange}
-            placeholder="Ton numéro de portable…"
+            placeholder="Numéro de Portable…"
           />
-          Addresse
+          
           <input
             className='inputSignUp'
             type="text"
             name="address"
             onChange={this.handleChange}
-            placeholder="Ton adresse…"
+            placeholder="Adresse…"
           />
-          Photo de profil
+          
           <input
             className='inputSignUp'
             type="text"
             name="photo_user"
             onChange={this.handleChange}
-            placeholder="Ton url de votre photo de profil…"
+            placeholder="URL Photo de profil…"
           />
-          <img src = {this.state.photo_user} alt = "userphoto" />
-          <input className="submitButton" type="submit" value="Se connecter" />
-        <Link to="/"><button>J'ai un compte!</button></Link>
+          
+          <div className="containerBtnSignUp">
+            <input className="btnSeconnecterSignUp" type="submit" value="Se connecter" />
+            <Link to="/"><button className="btnSeconnecterjaiCompte">J'ai un compte</button></Link>
+          </div>
         </form>
       </div>
     );
