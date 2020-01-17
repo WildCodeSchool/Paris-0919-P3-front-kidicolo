@@ -24,7 +24,7 @@ const DisplaySub = ({ subcategorys }) => {
       const res = await axios.get(url)
       setSubbCategories(res.data)
     }
-    axiosData('')
+  axiosData('')
     axiosSubCategory('http://localhost:5000/subcategory/:id')
   }, [])
   console.log(subCategories)
