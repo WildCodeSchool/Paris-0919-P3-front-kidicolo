@@ -39,7 +39,7 @@
 
 .box0:hover {
 
-    box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
 -moz-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
 -webkit-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
 }
@@ -71,6 +71,13 @@
     border-radius: 5px;
 }
 
+.box1:hover {
+
+    box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+    -moz-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+    -webkit-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+    }
+
 .box1:active {
     background-repeat: no-repeat;
     width: 50%;
@@ -96,6 +103,13 @@
     border-radius: 5px;
 }
 
+.box2:hover {
+
+    box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+    -moz-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+    -webkit-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+    }
+
 .box2:active {
     width: 50%;
     background:  lightsalmon;
@@ -119,6 +133,13 @@
     margin: 10px 10px;
     border-radius: 5px;
 }
+
+.box3:hover {
+
+    box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+    -moz-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+    -webkit-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+    }
 
 .box3:active {
     width: 50%;
