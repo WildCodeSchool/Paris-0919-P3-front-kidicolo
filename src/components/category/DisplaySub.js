@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
+import './DisplaySub.css'
 
 const DisplaySub = ({ subcategorys }) => {
   const id = subcategorys
@@ -29,7 +30,7 @@ const DisplaySub = ({ subcategorys }) => {
   }, [])
   console.log(subCategories)
   return (
-    <div className="containerSubcategory">
+    <div className="main-container">
 
       {/* <div>
             <Link to={`/displayarticle/${id}`}>
@@ -37,15 +38,20 @@ const DisplaySub = ({ subcategorys }) => {
             </Link>
           </div> */}
 
-      <select onChange={(e) => handleChange(e)}>
+    <div className="dropdown-container dropdown-solid">
+      <div className="dropdown-toggle click-dropdown">Choisissez</div>
+      <select className="dropdown-menu" onChange={(e) => handleChange(e)}>
         {subcategorys && subcategorys.map(subCat => {
           return(
-            <option value={subCat.id}>{subCat.name}</option>
+            <>
+            <option className="list" value={subCat.id}>{subCat.name}</option>
+            </>
           )
         })}
 
       </select> 
                 {/* <input type="button" value="Valider" onClick={() => setChosen(true)} /> */}
+    </div>
     </div>
   );
 }
