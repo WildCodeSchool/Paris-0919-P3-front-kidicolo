@@ -76,11 +76,23 @@ class AddArticle extends Component {
         <img src={Logo} className="logoK" alt="Logo Kidicolo" />
 
 
-        <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
+        <form onSubmit={this.handleSubmit} className='container'>
             <h3 className="titreAjoutArticle">Ajouter un article</h3>
-            Marque
-          <input
+
+            <div className="form-group">
+            <label for="exampleFormControlSelect1">Nom</label>
+          <input className="form-control"
+              require
+              type="text"
+              name="name"
+              onChange={this.handleChange}
+              placeholder="Nom de l'article"
+            />
+          </div>
+
+          <div className="form-group">
+            <label for="exampleFormControlTextarea1">Marque</label>
+          <input className="form-control"
               require
               onChange={this.handleChange}
               placeholder="Marque"
@@ -88,6 +100,8 @@ class AddArticle extends Component {
               name="brand"
             />
           </div>
+
+          
 
           <div className="form-group">
             <label for="exampleFormControlTextarea1">Description</label>
@@ -99,8 +113,8 @@ class AddArticle extends Component {
           </div>
 
           <div className="form-group">
-            Prix
-          <input
+          <label for="exampleFormControlSelect1">Prix</label>
+          <input className="form-control"
               require
               type="text"
               name="price"
@@ -109,16 +123,7 @@ class AddArticle extends Component {
             />
           </div>
 
-          <div className="form-group">
-            Nom
-          <input
-              require
-              type="text"
-              name="name"
-              onChange={this.handleChange}
-              placeholder="Nom de l'article"
-            />
-          </div>
+          
           <div className="form-group">
             <label for="exampleFormControlSelect1">Catégorie</label>
 
@@ -181,8 +186,8 @@ class AddArticle extends Component {
           </div>
           
           <div className="form-group">
-            Photo
-            <input
+          <label for="exampleFormControlSelect1">Photo</label>
+            <input className="form-control"
             type="url"
             name="id_photoart"
             onChange={this.handleChange}
