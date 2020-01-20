@@ -194,7 +194,7 @@ class AddArticle extends Component {
             placeholder="Copier l'url de la photo"
           />
           </div>
-          <button type="button"  className="btn btn-success mb-5 submitButton" type="submit"  value="Add">Ajouter</button>
+          <button className="btn btn-success mb-5 submitButton" type="submit"  value="Add">Ajouter</button>
           
         </form>
 
