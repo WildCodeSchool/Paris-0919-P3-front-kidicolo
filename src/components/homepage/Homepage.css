@@ -1,51 +1,206 @@
+@font-face {
+    font-family: "Quantify";
+    src: url("../../assets/fonts/Quantify.ttf") format("ttf"),
+}
+
 .mainContainer {
     height: 90vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    font-family: "Quantify", serif;
+    grid-column-gap: 1%;
+    grid-row-gap: 1%;
+    padding: 1%;
 }
 
-/* couleurs des grids */
+/*hover*/
+.box0:hover{
+    background-color: grey;
+ }
+
+.box1:hover{
+    background-color: grey;
+ }
+
+.box2:hover{
+    background-color: grey;
+ }
+
+.box3:hover{
+    background-color: grey;
+ }
+
+ /*Removing the decoration*/
+
+a{
+    text-decoration: none;
+}
+
+/* couleurs des grids et ajustements des grids*/
+
 
 .box0 {
     grid-column: 1/2;
     grid-row: 1/2;
-    background: lightcoral;
+    background: #e50f51;
+    /*height : 40px;*/
+    text-align: center;
+    padding-top: 131px;
+    padding-bottom: 131px;
+    color: white;
+    border-radius: 1%;
+    font-size: 1.2em;
 }
 
 .box1 {
-    background: lightsalmon;
+    background: #662381;
+    /*height : 40px;*/
+    text-align: center;
+    padding-top: 131px;
+    padding-bottom: 131px;
+    color: white;
+    border-radius: 1%;
+    font-size: 1.2em;
 }
 
 .box2 {
     grid-column: 1/2;
-    background: lightskyblue;
+    background: #662381;
+    /*height : 40px;*/
+    text-align: center;
+    padding-top: 131px;
+    padding-bottom: 131px;
+    color: white;
+    border-radius: 1%;
+    font-size: 1.2em;
 }
 
 .box3 {
-    background-color: lightslategrey;
+    background-color: #e50f51;
+    /*height : 40px;*/
+    text-align: center;
+    padding-top: 131px;
+    padding-bottom: 131px;
+    color: white;
+    border-radius: 1%;
+    font-size: 1.2em;
 }
 
-#textStyleHomepage{
+#textStyleHomepage {
     text-align: center;
 }
 
 /*Ici je vais gérer mes grids*/
 
-
 /* CSS LOGO à faire plus tard après le placement des boutons */
-
 
 /* .kidiLogo {
     height: 25%;
     width: 25%;
     border: solid black
-} 
+}
 
-*/
-
-/* img.logo {
+img.logo {
     height: 30vh;
     width: 30vh;
     border: solid black;
 } */
+
+/*Media Query */
+@media all and (min-width: 360px) and (max-width: 1366px)
+
+{
+    @font-face {
+        font-family: "Quantify";
+        src: url("../../assets/fonts/Quantify.ttf") format("ttf"),
+    }
+    
+    .mainContainer {
+        height: 90vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        font-family: "Quantify", serif;
+        grid-column-gap: 1%;
+        grid-row-gap: 1%;
+        padding: 1%;
+    }
+    
+    /*hover*/
+    .box0:hover{
+        background-color: grey;
+     }
+    
+    .box1:hover{
+        background-color: grey;
+     }
+    
+    .box2:hover{
+        background-color: grey;
+     }
+    
+    .box3:hover{
+        background-color: grey;
+     }
+    
+     /*Removing the decoration*/
+    
+    a{
+        text-decoration: none;
+    }
+    
+    /* couleurs des grids et ajustements des grids*/
+    
+    
+    .box0 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        background: #e50f51;
+        /*height : 40px;*/
+        text-align: center;
+        padding-top: 131px;
+        padding-bottom: 131px;
+        color: white;
+        border-radius: 1%;
+        font-size: 1.2em;
+    }
+    
+    .box1 {
+        background: #662381;
+        /*height : 40px;*/
+        text-align: center;
+        padding-top: 131px;
+        padding-bottom: 131px;
+        color: white;
+        border-radius: 1%;
+        font-size: 1.2em;
+    }
+    
+    .box2 {
+        grid-column: 1/2;
+        background: #662381;
+        /*height : 40px;*/
+        text-align: center;
+        padding-top: 131px;
+        padding-bottom: 131px;
+        color: white;
+        border-radius: 1%;
+        font-size: 1.2em;
+    }
+    
+    .box3 {
+        background-color: #e50f51;
+        /*height : 40px;*/
+        text-align: center;
+        padding-top: 131px;
+        padding-bottom: 131px;
+        color: white;
+        border-radius: 1%;
+        font-size: 1.2em;
+    }
+    
+    #textStyleHomepage {
+        text-align: center;
+    }
+}

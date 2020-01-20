@@ -21,7 +21,7 @@ class Categorie extends Component {
       case "Puericulture":
         url = 1;
         break;
-      case "Jeux&Jouets":
+      case "Jeux & Jouets":
         url = 2;
         break;
       case "Education":
@@ -43,9 +43,12 @@ class Categorie extends Component {
     console.log(this.state.subcategory);
     return (
       <div className="containerSubcategory">
-        {this.state.subcategory.map(subcategorys => (
+        {/* {this.state.subcategory.map(subcategorys => (
           <DisplaySub subcategorys={subcategorys} key={subcategorys.id} />
-        ))}
+        ))} */}
+
+        <DisplaySub subcategorys={this.state.subcategory}  />
+
       </div>
     );
   }

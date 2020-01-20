@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 
 const Homepage = () => {
-  const id = ["Vetements", "Puericulture", "Jeux&Jouets", "Education"];
+  const id = ["Vetements", "Puericulture", "Jeux & Jouets", "Education"];
   return (
     <div className="mainContainer">
        {id.map((id, index) => {
