@@ -8,7 +8,7 @@ const DisplaySub = ({ subcategorys }) => {
 
           <div>
               <Link to={`/displayarticle/${subcategorys.id}`}>
-              <select><option>{subcategorys.name}</option></select>
+              <select>{subcategorys.name}</select>
               </Link>
           </div>
           </div>
