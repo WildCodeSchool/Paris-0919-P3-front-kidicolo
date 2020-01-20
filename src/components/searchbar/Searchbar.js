@@ -12,7 +12,7 @@ class Searchbar extends React.Component {
             this.setState({ article: [] })
         } else {
             axios
-                .get(`http://localhost:2121/article/article/${event.target.value}`)
+                .get(`http://localhost:5000/article/article/${event.target.value}`)
                 .then((res) => {
                     this.setState({ article: res.data })
                     console.log("article :",this.state.article)

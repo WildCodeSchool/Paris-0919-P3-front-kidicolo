@@ -12,9 +12,9 @@ class Categorie extends  Component {
       const { match: { params } } = this.props;
       let idarticle = 0;
 
-      if(params.id === "Chaussures"){
-        console.log("C'est ca gros")
-      }
+      // if(params.id === "Chaussures"){
+      //   console.log("C'est ca gros")
+      // }
       axios.get(`/article/subcat/${idarticle}`)
         .then(res => {
           this.setState({ articles: res.data })

@@ -2,18 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const DisplaySub = ({ subcategorys }) => {
-
   return (
     <div className="containerSubcategory">
+      <div>
 
-          <div>
               <Link to={`/displayarticle/${subcategorys.id}`}>
-              <h1>{subcategorys.name}</h1>
+                {subcategorys.name}
               </Link>
-          </div>
-          </div>
-        );
-      }
 
+      </div>
+    </div>
+  );
+};
 
 export default DisplaySub;

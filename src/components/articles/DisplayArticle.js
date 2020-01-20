@@ -1,21 +1,43 @@
-import React from "react";
+import React, {Component} from "react"
+import axios from "axios"
+import DisplayAllArticle from "./Di"
 
-const DisplayArticle = ({ article }) => {
-  console.log(article);
+class Categorie extends  Component {
+    state = {
+      articles: [],
+    };
 
-  return (
-    <div>
-      <img src={article.photourl} alt="Card cap" />
-      <div>
-        <p>{article.id_user_vendeur}</p>
-        <p >{article.brand}</p>
-        <h5 >{article.name}</h5>
-        <p >{article.description}</p>
-        <h5 >{article.price}€</h5>
-        <p>{article.id_user_vendeur.firstname}</p>
-      </div>
-    </div>
-  );
-};
+    getArticle() {
+     
+      const { match: { params } } = this.props;
+      let idarticle = 0;
 
-export default DisplayArticle;
+      if(params.id === "Chaussures"){
+        console.log("C'est ca gros")
+      }
+      axios.get(`/article/subcat/${idarticle}`)
+        .then(res => {
+          this.setState({ articles: res.data })
+        });
+    }
+    componentDidMount() {
+      this.getArticle()
+    }
+
+    render() {
+      console.log(this.state.articles)
+      console.log(this.props)
+      
+      return (
+          <div className="containerSubcategory">
+            {this.state.articles.map(article => (
+              < DisplayAllArticle article={article} key={article.id} />
+            ))
+            }
+          </div>
+
+      );
+    }
+  }
+  
+  export default Categorie

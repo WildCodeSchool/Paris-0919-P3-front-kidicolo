@@ -10,7 +10,8 @@ import UserLogin from "./components/user/UserLogin";
 import Homepage from "./components/homepage/Homepage";
 import Categorie from "./components/category/Categorie";
 import DisplaySub from "./components/category/DisplaySub";
-import Article from "./components/articles/Article"
+import Article from "./components/articles/Article";
+import AddArticle from "./components/articles/AddArticle";
 //Import css
 import "./App.css";
 
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/categorie/:id" component={Categorie} />
           <Route path="/subcategorie/:id" component={DisplaySub} />
           <Route path="/displayarticle/:id" component={Article} />
+          <Route path="/addarticle" component={AddArticle} />
         </Switch>
       </BrowserRouter>
     </div>
