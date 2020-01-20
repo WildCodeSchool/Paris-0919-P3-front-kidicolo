@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import '../articles/articlecss/AddArticle.css'
+
 import axios from "axios";
 
 class AddArticle extends Component {
@@ -71,11 +73,12 @@ class AddArticle extends Component {
     return (
       <div className="containerSettings">
         <form className="formClass" onSubmit={this.handleSubmit}>
+          <h3>Ajouter un article</h3>
           Marque:
           <input
           require
             onChange={this.handleChange}
-            placeholder="Brand..."
+            placeholder="Marque"
             type="text"
             name="brand"
           />
@@ -85,7 +88,7 @@ class AddArticle extends Component {
             type="textarea"
             name="description"
             onChange={this.handleChange}
-            placeholder="Description du produit..."
+            placeholder="Description du produit"
           />
           Prix:
           <input
@@ -93,7 +96,7 @@ class AddArticle extends Component {
             type="text"
             name="price"
             onChange={this.handleChange}
-            placeholder="Price ..."
+            placeholder="Prix"
           />
           Nom:
           <input
@@ -101,7 +104,7 @@ class AddArticle extends Component {
             type="text"
             name="name"
             onChange={this.handleChange}
-            placeholder="Enter the name ..."
+            placeholder="Nom de l'article"
           />
           Catégorie :
           <div>
