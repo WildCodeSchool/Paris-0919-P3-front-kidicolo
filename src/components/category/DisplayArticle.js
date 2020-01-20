@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import axios from "axios"
-import DisplayAllArticle from "./Di"
+import DisplayArticle2 from "./DisplayArticle2"
 
 class Categorie extends  Component {
     state = {
@@ -12,9 +12,9 @@ class Categorie extends  Component {
       const { match: { params } } = this.props;
       let idarticle = 0;
 
-      if(params.id === "Chaussures"){
-        console.log("C'est ca gros")
-      }
+      // if(params.id === "Chaussures"){
+      //   console.log("C'est ca gros")
+      // }
       axios.get(`/article/subcat/${idarticle}`)
         .then(res => {
           this.setState({ articles: res.data })
@@ -31,7 +31,7 @@ class Categorie extends  Component {
       return (
           <div className="containerSubcategory">
             {this.state.articles.map(article => (
-              < DisplayAllArticle article={article} key={article.id} />
+              < DisplayArticle2 article={article} key={article.id} />
             ))
             }
           </div>
