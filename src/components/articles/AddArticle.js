@@ -107,7 +107,7 @@ class AddArticle extends Component {
           <div>
           <select
           require
-            type="text"
+            type="checkbox"
             name="categories"
             placeholder="Enter your address"
             onChange={this.handleChange}
