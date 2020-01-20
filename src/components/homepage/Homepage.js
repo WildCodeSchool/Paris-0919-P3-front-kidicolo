@@ -13,9 +13,11 @@ const Homepage = () => {
     <div className="mainContainer">
        {id.map((id, index) => {
         return (
+          
           <NavLink className={`box${index}`} to={`/categorie/${id}`}>
             <h3 className="NavlinksCategorie">{id}</h3>
           </NavLink>
+          
         );
       })}
 

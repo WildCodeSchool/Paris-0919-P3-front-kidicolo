@@ -19,19 +19,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    flex-wrap: wrap;
 }
 
 /* couleurs des grids */
 
 .box0 {
-    width: 50%;
+    width: 325px;
+    height: 325px;
     background:  rgb(103, 159, 114);
     background-image: url('../../assets/img/homepage/ClothesWhite.svg');
     background-repeat: no-repeat;
     background-size: 40%;
     background-position-x: center;
-    background-position-y: center;
+    background-position-y: 40%;
     margin: 10px 10px;
     border-radius: 5px;
     
@@ -39,33 +40,35 @@
 
 .box0:hover {
 
-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
--moz-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
--webkit-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+box-shadow: inset 0px 0px 7px 4px rgba(51, 87, 58, 0.7);
+-moz-box-shadow: inset 0px 0px 7px 4px rgba(51, 87, 58, 0.7);
+-webkit-box-shadow: inset 0px 0px 7px 4px rgba(51, 87, 58, 0.7);
 }
 
 
 .box0:active {
-    width: 50%;
+    width: 325px;
+    height: 325px;
     background:  rgb(103, 159, 114);
     background-image: url('../../assets/img/homepage/Clothes.svg');
     background-repeat: no-repeat;
     background-size: 40%;
     background-position-x: center;
     background-position-y: center;
-    background-position-y: center;
+    background-position-y: 40%;
     margin: 10px 10px;
     border-radius: 5px;
 }
 
 .box1 {
     background-repeat: no-repeat;
-    width: 50%;
+    width: 325px;
+    height: 325px;
     background: lightcoral;
     background-image: url('../../assets/img/homepage/childFriendlyWhite.svg');
     background-size: 30%;
     background-position-x: center;
-    background-position-y: center;
+    background-position-y: 40%;
     background-repeat: no-repeat;
     margin: 10px 10px;
     border-radius: 5px;
@@ -73,31 +76,33 @@ box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
 
 .box1:hover {
 
-    box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
-    -moz-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
-    -webkit-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+    box-shadow: inset 0px 0px 7px 4px rgba(194, 74, 74, 0.7);
+    -moz-box-shadow: inset 0px 0px 7px 4px rgba(194, 74, 74, 0.7);
+    -webkit-box-shadow: inset 0px 0px 7px 4px rgba(194, 74, 74, 0.7);
     }
 
 .box1:active {
     background-repeat: no-repeat;
-    width: 50%;
+    width: 325px;
+    height: 325px;
     background: lightcoral;
     background-image: url('../../assets/img/homepage/childFriendly.svg');
     background-size: 30%;
     background-position-x: center;
-    background-position-y: center;
+    background-position-y: 40%;
     background-repeat: no-repeat;
     margin: 10px 10px;
     border-radius: 5px;
 }
 
 .box2 {
-    width: 50%;
+    width: 325px;
+    height: 325px;
     background:  lightsalmon;
     background-image: url('../../assets/img/homepage/bearWhite.svg');
     background-size: 30%;
     background-position-x: center;
-    background-position-y: center;
+    background-position-y: 40%;
     background-repeat: no-repeat;
     margin: 10px 10px;
     border-radius: 5px;
@@ -105,30 +110,32 @@ box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
 
 .box2:hover {
 
-    box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
-    -moz-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
-    -webkit-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+    box-shadow: inset 0px 0px 7px 4px rgba(152, 79, 50, 0.7);
+    -moz-box-shadow: inset 0px 0px 7px 4px rgba(152, 79, 50, 0.7);
+    -webkit-box-shadow: inset 0px 0px 7px 4px rgba(152, 79, 50, 0.7);
     }
 
 .box2:active {
-    width: 50%;
+    width: 325px;
+    height: 325px;
     background:  lightsalmon;
     background-image: url('../../assets/img/homepage/bear.svg');
     background-size: 30%;
     background-position-x: center;
-    background-position-y: center;
+    background-position-y: 40%;
     background-repeat: no-repeat;
     margin: 10px 10px;
     border-radius: 5px;
 }
 
 .box3 {
-    width: 50%;
+    width: 325px;
+    height: 325px;
     background-color: lightslategrey;
     background-image: url('../../assets/img/homepage/BookWhite.svg');
     background-size: 30%;
     background-position-x: center;
-    background-position-y: center;
+    background-position-y: 40%;
     background-repeat: no-repeat;
     margin: 10px 10px;
     border-radius: 5px;
@@ -136,18 +143,19 @@ box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
 
 .box3:hover {
 
-    box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
-    -moz-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
-    -webkit-box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
+    box-shadow: inset 0px 0px 7px 4px rgba(78, 98, 118, 0.7);
+    -moz-box-shadow: inset 0px 0px 7px 4px rgba(78, 98, 118, 0.7);
+    -webkit-box-shadow: inset 0px 0px 7px 4px rgba(78, 98, 118, 0.7);
     }
 
 .box3:active {
-    width: 50%;
+    width: 325px;
+    height: 325px;
     background-color: lightslategrey;
     background-image: url('../../assets/img/homepage/Book.svg');
     background-size: 30%;
     background-position-x: center;
-    background-position-y: center;
+    background-position-y: 40%;
     background-repeat: no-repeat;
     margin: 10px 10px;
     border-radius: 5px;
@@ -163,9 +171,10 @@ box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
     justify-content: center;
     height: 50vh;
     align-items: flex-end;
-    padding-bottom: 60px;
+    padding-bottom: 3em;
     font-family: "Quantify";
     color: #ffffff;
+    text-decoration: none;
 }
 
 .NavlinksCategorie:hover{
@@ -176,8 +185,6 @@ box-shadow: inset 0px 0px 7px 4px rgba(99, 99, 99, 0.85);
     display: flex;
     justify-content: center;
     height: 50vh;
-    
-    
     
 }
 
