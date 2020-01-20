@@ -15,11 +15,13 @@
 
 
 .mainContainer {
-    height: 70vh;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 6em;
+    margin-bottom: 5em;
 }
 
 /* couleurs des grids */

@@ -43,7 +43,7 @@ class UserSignup extends Component {
       <div className="containerSettingsSignUp">
         <img src={Logo} className="logoK" alt="Logo Kidicolo" />
         <form className="formClassSignUp" onSubmit={this.handleSubmit}>
-        <img src = {this.state.photo_user} className="photoProfilUser" />
+        <img src = {this.state.photo_user} className="photoProfilUser" alt='profil pic' />
         
           <input
             className='inputSignUp'

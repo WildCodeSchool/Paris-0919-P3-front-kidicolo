@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 
 
 const Homepage = () => {
-  const id = ["Vetements", "Puericulture", "Jeux & Jouets", "Education"];
+  const id = ["Vetements", "Puericulture", "Jeux&Jouets", "Education"];
   return (
     <div>
       <SearchBar />
