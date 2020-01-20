@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import Logo from '../../assets/img/logo/logoK.png'
 import '../articles/articlecss/AddArticle.css'
 
 import axios from "axios";
@@ -37,27 +38,27 @@ class AddArticle extends Component {
     e.preventDefault();
   };
 
-  getSubcategorie(){
+  getSubcategorie() {
     axios.get("/subcategory").then(res => {
-      this.setState({subcategoriesList : res.data})
+      this.setState({ subcategoriesList: res.data })
     })
   }
 
-  getCategorie(){
+  getCategorie() {
     axios.get("/category").then(res => {
-      this.setState({categoriesList : res.data})
+      this.setState({ categoriesList: res.data })
     })
   }
 
   getGender() {
     axios.get("/gender").then(res => {
-      this.setState({ gendersList : res.data });
+      this.setState({ gendersList: res.data });
       console.log(this.state);
     });
   }
   getAge() {
     axios.get("/age").then(res => {
-      this.setState({ agesList : res.data });
+      this.setState({ agesList: res.data });
       console.log(this.state);
     });
   }
@@ -72,7 +73,127 @@ class AddArticle extends Component {
     console.log(this.state.categories);
     return (
       <div className="containerSettings">
-        <form className="formClass" onSubmit={this.handleSubmit}>
+        <img src={Logo} className="logoK" alt="Logo Kidicolo" />
+
+
+        <form onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <h3 className="titreAjoutArticle">Ajouter un article</h3>
+            Marque
+          <input
+              require
+              onChange={this.handleChange}
+              placeholder="Marque"
+              type="text"
+              name="brand"
+            />
+          </div>
+
+          <div className="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" require
+              type="textarea"
+              name="description"
+              onChange={this.handleChange}
+              placeholder="Description du produit"/>
+          </div>
+
+          <div className="form-group">
+            Prix
+          <input
+              require
+              type="text"
+              name="price"
+              onChange={this.handleChange}
+              placeholder="Prix"
+            />
+          </div>
+
+          <div className="form-group">
+            Nom
+          <input
+              require
+              type="text"
+              name="name"
+              onChange={this.handleChange}
+              placeholder="Nom de l'article"
+            />
+          </div>
+          <div className="form-group">
+            <label for="exampleFormControlSelect1">Catégorie</label>
+
+            <select className="form-control" id="exampleFormControlSelect1"
+              require
+              type="checkbox"
+              name="categories"
+              placeholder="Enter your address"
+              onChange={this.handleChange}
+            >
+              {this.state.categoriesList.map((data) => (
+                <option value={data.id}>{data.name}</option>
+              ))}
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label for="exampleFormControlSelect1">Sous-catégorie</label>
+
+            <select className="form-control"
+              require
+              type="text"
+              name="subcategories"
+              placeholder="Enter your address"
+              onChange={this.handleChange}
+            >
+              {this.state.subcategoriesList.map((data) => (
+                <option value={data.id}>{data.name}</option>
+              ))}
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label for="exampleFormControlSelect1">Age</label>
+            <select className="form-control"
+              require
+              type="text"
+              name="ages"
+              placeholder="Enter your address"
+              onChange={this.handleChange}
+            >
+              {this.state.agesList.map((data) => (
+                <option value={data.id}>{data.age}</option>
+              ))}
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label for="exampleFormControlSelect1">Sexe</label>
+            <select className="form-control"
+          require
+            type="text"
+            name="genders"
+            onChange={this.handleChange}
+          >
+               {this.state.gendersList.map((data) => (
+             <option value={data.id}>{data.gender}</option>
+            ))}
+          </select>
+          </div>
+          
+          <div className="form-group">
+            Photo
+            <input
+            type="url"
+            name="id_photoart"
+            onChange={this.handleChange}
+            placeholder="Copier l'url de la photo"
+          />
+          </div>
+          <button type="button"  className="btn btn-success mb-5 submitButton" type="submit"  value="Add">Ajouter</button>
+          
+        </form>
+
+        {/* <form className="formClassAddArticle" onSubmit={this.handleSubmit}>
           <h3>Ajouter un article</h3>
           Marque:
           <input
@@ -106,6 +227,7 @@ class AddArticle extends Component {
             onChange={this.handleChange}
             placeholder="Nom de l'article"
           />
+
           Catégorie :
           <div>
           <select
@@ -164,7 +286,7 @@ class AddArticle extends Component {
             placeholder="Enter the url of the photo"
           />
           <input className="submitButton" type="submit" value="Add" />
-        </form>
+        </form> */}
       </div>
     );
   }
