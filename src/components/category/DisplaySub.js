@@ -1,59 +1,57 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "./DisplaySub.css";
+import DisplayArticle from "../articles/DisplayArticle";
 
-import React, { useState, useEffect } from 'react';
-import axios from 'axios'
-import './DisplaySub.css'
-
-const DisplaySub = ({ subcategorys }) => {
-  const id = subcategorys
-  const [select, setSelect] = useState()
-  const [subCategories, setSubbCategories] = useState()
-  console.log(subcategorys);
-
-  const handleChange = (e) => {
-    console.log(e.target.value);
-  }
-
-  useEffect(() => {
-    const axiosData = async url => {
-      const res = await axios.get(url)
-      setSelect(res.data)
-      console.log(res)
-    }
-
-    const axiosSubCategory = async url => {
-      const res = await axios.get(url)
-      setSubbCategories(res.data)
-    }
-  axiosData('')
-    axiosSubCategory('http://localhost:5000/subcategory/:id')
-  }, [])
-  console.log(subCategories)
+const DisplaySub = ({ subcategorys, handleChange }) => {
+  const id = subcategorys;
+  const [select, setSelect] = useState();
+  const [subCategories, setSubbCategories] = useState();
+  const [article, setArticle] = useState();
+  console.log('subcat id',id);
   return (
     <div className="main-container">
-
-      {/* <div>
-            <Link to={`/displayarticle/${id}`}>
-              <h1>{subcategorys.name}</h1>
-            </Link>
-          </div> */}
-
-    <div className="form-group dropmenu">
-      <select className="custom-select text-center menu ml-auto mr-auto" name="category" onChange={(e) => handleChange(e)}>
-        <option selected>Sélectionner une catégorie</option>
-        {subcategorys && subcategorys.map(subCat => {
-          return(
-            <>
-            <option value={subCat.id}>{subCat.name}</option>
-            </>
-          )
-        })}
-
-      </select> 
+      <div className="form-group dropmenu">
+        <select
+          className="custom-select text-center menu ml-auto mr-auto"
+          name="category"
+          onChange={(e) => handleChange(e.target.value)}
+          >
+          <option selected>Sélectionner une catégorie</option>
+          {subcategorys &&
+            subcategorys.map(subCat => {
+              return (
+                <>
+                  <option value={subCat.id}>{subCat.name}</option>
+                </>
+              );
+            })}
+        </select>
       </div>
-                {/* <input type="button" value="Valider" onClick={() => setChosen(true)} /> */}
+
     </div>
   );
-}
-
+};
 
 export default DisplaySub;
+
+// useEffect(() => {
+  // const axiosData = async url => {
+  //   const res = await axios.get(url);
+  //   setSelect(res.data);
+  //   console.log(res);
+  // };
+
+  // const axiosSubCategory = async url => {
+  //   const res = await axios.get(url);
+  //   setSubbCategories(res.data);
+  // };
+
+  // const axiosArticle = async url => {
+  //   const res = await axios.get(url);
+  //   setArticle(res.data);
+  // };
+  // axiosData(`http://localhost:5000/article/subcat/${id}`);
+  // axiosSubCategory("http://localhost:5000/subcategory/:id");
+  // axiosArticle("http://localhost:5000/subcat/:id");
+// }, []);
