@@ -1,66 +1,20 @@
 @font-face {
-    font-family: "Quantify";
-    src: url("../../assets/fonts/Quantify.ttf") format("ttf"),
+    font-family: "RobotoMedium";
+    src: url("../../assets/fonts/Roboto-Medium.ttf");
 }
 
-.list {
-    font-family: "Quantify", serif;
+
+
+.dropmenu {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	font-family: "RobotoMedium";
 }
 
-.formfield-select {
-	position: relative;
-}
-
-.formfield-select--container {
-	position: relative; 
-	
-	background-color: #fff;
-	border: #777 1px solid;
-	margin: auto;
-    width: 50%;
-	overflow: hidden; 
-	/* 
-		Le select natif pourra 
-		dépasser sans être vu 
-	*/
-}
-
-.formfield-select--container select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none; 
-	/* 
-		On est sûr de ne plus voir
-		la flèche native 
-	*/
-	
-	height: auto;
-	border: 0; 
-	padding: .75em;
-	border-radius: 0;
-	
-
-	overflow: hidden;
-	text-overflow: ellipsis;
-	/* 
-		On empêche le texte d'aller
-		jusqu'au bout s'il est trop long
-	*/
-
-}
-
-.formfield-select--container::after { 
-	/* Le pointeur du select */
-	content: '';
-	position: absolute;
-	top: 50%; 
-	margin-top: -3px;
-	right: .75em;  
-	display: block; 
-	width: 0; height: 0;
-	border-color: transparent;
-	border-top-color: #444; 
-	border-width: 6px;
-	border-style: solid;
-	pointer-events: none;
+.menu {
+	display: flex;
+	font-family: "RobotoMedium";
+	margin-top: 60px;
+	justify-content: center;
 }

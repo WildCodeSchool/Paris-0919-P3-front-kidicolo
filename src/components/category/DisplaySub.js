@@ -4,9 +4,6 @@ import axios from 'axios'
 import './DisplaySub.css'
 
 const DisplaySub = ({ subcategorys }) => {
-<<<<<<< HEAD
-
-=======
   const id = subcategorys
   const [select, setSelect] = useState()
   const [subCategories, setSubbCategories] = useState()
@@ -14,7 +11,6 @@ const DisplaySub = ({ subcategorys }) => {
 
   const handleChange = (e) => {
     console.log(e.target.value);
-    
   }
 
   useEffect(() => {
@@ -32,34 +28,22 @@ const DisplaySub = ({ subcategorys }) => {
     axiosSubCategory('http://localhost:5000/subcategory/:id')
   }, [])
   console.log(subCategories)
->>>>>>> dropMenuCss
   return (
     <div className="main-container">
 
-<<<<<<< HEAD
-          <div>
-              <Link to={`/displayarticle/${subcategorys.id}`}>
-              <h1>{subcategorys.name}</h1>
-              </Link>
-          </div>
-          </div>
-        );
-      }
-=======
       {/* <div>
             <Link to={`/displayarticle/${id}`}>
               <h1>{subcategorys.name}</h1>
             </Link>
           </div> */}
 
-    <div className="formfield-select">
-      <label for="select">Choisissez</label>
-      <div className="formfield-select--container">
-      <select id="select" onChange={(e) => handleChange(e)}>
+    <div className="form-group dropmenu">
+      <select className="custom-select text-center menu ml-auto mr-auto" name="category" onChange={(e) => handleChange(e)}>
+        <option selected>Sélectionner une catégorie</option>
         {subcategorys && subcategorys.map(subCat => {
           return(
             <>
-            <option className="list" value={subCat.id}>{subCat.name}</option>
+            <option value={subCat.id}>{subCat.name}</option>
             </>
           )
         })}
@@ -68,10 +52,8 @@ const DisplaySub = ({ subcategorys }) => {
       </div>
                 {/* <input type="button" value="Valider" onClick={() => setChosen(true)} /> */}
     </div>
-    </div>
   );
 }
->>>>>>> dropMenuCss
 
 
 export default DisplaySub;
