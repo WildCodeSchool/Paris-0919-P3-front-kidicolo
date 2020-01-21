@@ -6,38 +6,53 @@ import SearchBar from "../searchbar/Searchbar"
 class Categorie extends Component {
   state = {
     subcategory: [],
-    article: []
+    article: [],
+    search: ""
   };
 
-  onChange = e => {
-    const searchTerm = { name : e}
-    console.log(searchTerm)
-    // if(searchTerm && searchTerm.name.length >= 3){
-    //   this.getResFromSearch(searchTerm)
+  // onChange = e => {
+  //   const searchTerm = { name : e}
+  //   console.log(searchTerm)
+  //   // if(searchTerm && searchTerm.name.length >= 3){
+  //   //   this.getResFromSearch(searchTerm)
+  //   // }
+  // }
+
+  // getResFromSearch = (term) => {
+  //     axios
+  //         .post(`http://localhost:5000/article/search/`, term)
+  //         .then((res) => {
+  //           this.setState({ article: res.data })
+  //           return res
+  //         })
+  // }
+
+  onSearchChange = e => {
+    console.log(e.target.value)
+    this.setState({ [e.target.name]: e.target.value }, () => {
+      if (this.state.search && this.state.search.length > 1) {
+        clearTimeout(this.timeOut)
+        this.timeOut = setTimeout(() => {
+          axios
+            .post(`http://localhost:5000/article/search/`, { name: this.state.search })
+            .then((res) => {
+              this.setState({ article: res.data })
+              return res
+            })
+        }, 400)
+      }
+    })
+    // if (e.target.value.length === 0) {
+    //   this.setState({ article: [] })
+    // } else {
+    //   axios
+    //     .post(`http://localhost:5000/article/search/`, {name: e.target.value})
+    //     .then((res) => {
+    //       this.setState({ article: res.data })
+    //       return res
+    //     })
     // }
   }
-
-  getResFromSearch = (term) => {
-      axios
-          .post(`http://localhost:5000/article/search/`, term)
-          .then((res) => {
-            this.setState({ article: res.data })
-            return res
-          })
-  }
-
-  // onSearchChange = event => {
-  //   if (event.target.value.length === 0) {
-  //     this.setState({ article: [] })
-  //   } else {
-  //     axios
-  //       .post(`http://localhost:5000/article/search/`, {name: event.target.value})
-  //       .then((res) => {
-  //         this.setState({ article: res.data })
-  //         return res
-  //       })
-  //   }
-  // }
 
   getSubcategory() {
     const {
@@ -72,7 +87,7 @@ class Categorie extends Component {
   render() {
     console.log(this.state.subcategory);
     console.log('====================================');
-    console.log("state", this.state.article );
+    console.log("state", this.state.article);
     console.log('====================================');
     return (
       <div className="containerSubcategory">
@@ -80,7 +95,7 @@ class Categorie extends Component {
           <DisplaySub subcategorys={subcategorys} key={subcategorys.id} />
         ))}
         <div className="searchBar">
-          <SearchBar article={this.state.article} searchChange={this.onChange} />
+          <SearchBar searchChange={this.onSearchChange} />
           {/* <input
             type="text"
             class="searchTerm"
