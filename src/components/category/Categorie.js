@@ -10,23 +10,6 @@ class Categorie extends Component {
     search: ""
   };
 
-  // onChange = e => {
-  //   const searchTerm = { name : e}
-  //   console.log(searchTerm)
-  //   // if(searchTerm && searchTerm.name.length >= 3){
-  //   //   this.getResFromSearch(searchTerm)
-  //   // }
-  // }
-
-  // getResFromSearch = (term) => {
-  //     axios
-  //         .post(`http://localhost:5000/article/search/`, term)
-  //         .then((res) => {
-  //           this.setState({ article: res.data })
-  //           return res
-  //         })
-  // }
-
   onSearchChange = e => {
     console.log(e.target.value)
     this.setState({ [e.target.name]: e.target.value }, () => {
@@ -42,18 +25,7 @@ class Categorie extends Component {
         }, 400)
       }
     })
-    // if (e.target.value.length === 0) {
-    //   this.setState({ article: [] })
-    // } else {
-    //   axios
-    //     .post(`http://localhost:5000/article/search/`, {name: e.target.value})
-    //     .then((res) => {
-    //       this.setState({ article: res.data })
-    //       return res
-    //     })
-    // }
   }
-
   getSubcategory() {
     const {
       match: { params }
@@ -85,10 +57,6 @@ class Categorie extends Component {
     this.getSubcategory();
   }
   render() {
-    console.log(this.state.subcategory);
-    console.log('====================================');
-    console.log("state", this.state.article);
-    console.log('====================================');
     return (
       <div className="containerSubcategory">
         {this.state.subcategory.map(subcategorys => (
@@ -96,11 +64,9 @@ class Categorie extends Component {
         ))}
         <div className="searchBar">
           <SearchBar searchChange={this.onSearchChange} />
-          
           {this.state.article.map((elem, i) => <p key={i}>{elem.name}</p>)}
         </div>
       </div>
-
     );
   }
 }
