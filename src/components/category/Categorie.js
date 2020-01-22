@@ -96,13 +96,7 @@ class Categorie extends Component {
         ))}
         <div className="searchBar">
           <SearchBar searchChange={this.onSearchChange} />
-          {/* <input
-            type="text"
-            class="searchTerm"
-            placeholder="recherche"
-            onChange={this.onSearchChange}
-          // onClick={this.handleClick}
-          /> */}
+          
           {this.state.article.map((elem, i) => <p key={i}>{elem.name}</p>)}
         </div>
       </div>
