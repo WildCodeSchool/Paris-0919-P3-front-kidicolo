@@ -6,7 +6,7 @@ class Navbar extends React.Component {
     return (
         <nav class="nav fixed-bottom bg-light containerNavbar">
           <Link to="/homepage" className="linkHome"></Link>
-          <div className="linkSearch"></div>
+          <Link to='/categorie/:id'className="linkSearch"></Link>
           <Link to="/addarticle" className="linkSell"></Link>
           <div className="linkMess"></div>
           <Link to="/" className="linkProfil"></Link>

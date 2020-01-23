@@ -31,6 +31,7 @@ const App = () => {
           <Route path="/displayarticle/:id" component={Article} />
           <Route path="/addarticle" component={AddArticle} />
         </Switch>
+        <Navbar />
       </BrowserRouter>
     </div>
   );

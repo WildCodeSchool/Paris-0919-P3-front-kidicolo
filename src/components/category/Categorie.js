@@ -76,14 +76,15 @@ class Categorie extends Component {
     console.log('yoloArticle :', articles)
     return (
       <div className="containerSubcategory">
-        <DisplaySub
-          subcategorys={subcategory}
-          handleChange={this.handleChange}
-        />
         <div className="searchBar">
           <SearchBar searchChange={this.onSearchChange} />
           {this.state.article.map((elem, i) => <p key={i}>{elem.name}</p>)}
         </div>
+        <DisplaySub
+          subcategorys={subcategory}
+          handleChange={this.handleChange}
+        />
+        
         <div className="container">
           <div className="row mx-auto">
           {articles &&

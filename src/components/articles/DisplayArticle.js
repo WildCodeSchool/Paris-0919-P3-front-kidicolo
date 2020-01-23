@@ -31,32 +31,32 @@ const DisplayArticle = ({ article }) => {
   );
 };
 
-      if(params.id === "Chaussures"){
-        console.log("C'est ca gros")
-      }
-      axios.get(`/article/subcat/${idarticle}`)
-        .then(res => {
-          this.setState({ articles: res.data })
-        });
-    }
-    componentDidMount() {
-      this.getArticle()
-    }
+  //     if(params.id === "Chaussures"){
+  //       console.log("C'est ca gros")
+  //     }
+  //     axios.get(`/article/subcat/${idarticle}`)
+  //       .then(res => {
+  //         this.setState({ articles: res.data })
+  //       });
+  //   }
+  //   componentDidMount() {
+  //     this.getArticle()
+  //   }
 
-    render() {
-      console.log(this.state.articles)
-      console.log(this.props)
+  //   render() {
+  //     console.log(this.state.articles)
+  //     console.log(this.props)
       
-      return (
-          <div className="containerSubcategory">
-            {this.state.articles.map(article => (
-              < DisplayAllArticle article={article} key={article.id} />
-            ))
-            }
-          </div>
+  //     return (
+  //         <div className="containerSubcategory">
+  //           {this.state.articles.map(article => (
+  //             < DisplayAllArticle article={article} key={article.id} />
+  //           ))
+  //           }
+  //         </div>
 
-      );
-    }
-  }
+  //     );
+  //   }
+  // }
   
-  export default Categorie
+  export default DisplayArticle

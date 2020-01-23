@@ -1,11 +1,11 @@
 import React from "react";
 import Logo from "../../assets/img/logo/Logo_Transparant4.png"
-import './Searchbar.css'
+import './RechercheBS.css'
 import "./Homepage.css";
 import { NavLink } from "react-router-dom";
 
 
-const SearchBar = () => {
+const RechercheBS = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -27,4 +27,4 @@ const SearchBar = () => {
             );
           };
           
-          export default SearchBar;
+          export default RechercheBS;

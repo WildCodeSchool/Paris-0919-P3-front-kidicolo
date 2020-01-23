@@ -1,7 +1,7 @@
 import React from "react";
 import "./Homepage.css";
 import { NavLink } from "react-router-dom";
-import SearchBar from "./SearchBar";
+import RechercheBS from "./RechercheBS";
 
 
 
@@ -9,7 +9,7 @@ const Homepage = () => {
   const id = ["Vetements", "Puericulture", "Jeux & Jouets", "Education"];
   return (
     <div>
-      <SearchBar />
+      <RechercheBS />
     <div className="mainContainer">
        {id.map((id, index) => {
         return (
