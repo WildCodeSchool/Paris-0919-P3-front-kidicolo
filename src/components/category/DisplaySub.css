@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "RobotoMedium";
+    src: url("../../assets/fonts/Roboto-Medium.ttf");
+}
+
+
+
+.dropmenu {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	font-family: "RobotoMedium";
+}
+
+.menu {
+	display: flex;
+	font-family: "RobotoMedium";
+	margin-top: 60px;
+	justify-content: center;
+}

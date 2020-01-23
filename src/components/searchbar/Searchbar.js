@@ -1,11 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import './Searchbar.css'
 
-class Searchbar extends React.Component {
-    state = {
-        article: [],
-        isClicked: false
-    }
+const Searchbar = ({ article, searchChange }) => {
 
     onSearchChange = event => {
         if (event.target.value.length === 0) {
@@ -21,20 +18,19 @@ class Searchbar extends React.Component {
                 
         }
     }
-    render() {
         return (
-            <div>
-                <input
-                    type="text"
-                    class="searchTerm"
-                    placeholder="recherche"
-                    onChange={this.onSearchChange}
-                    // onClick={this.handleClick}
-                />
+        <div>
+                
+            <div className="input-group input-group-lg">
+                <div className="input-group-prepend">
+                    <span className="input-group-text" id="inputGroup-sizing-lg">Recherche</span>
+                </div>
+                <input type="text" className="form-control searchTerm" aria-label="Default" name='search'  aria-describedby="inputGroup-sizing-sm" onChange={this.onSearchChange} placeholder="Tapez ici le nom de l'article…"/>
             </div>
-            
-        )
-    }
-}
 
+        </div>
+        )
+        }
+        
+        
 export default Searchbar

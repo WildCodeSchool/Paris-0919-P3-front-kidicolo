@@ -24,7 +24,8 @@
     margin-bottom: 5em;
 }
 
-/* couleurs des grids */
+/* couleurs des grids et ajustements des grids*/
+
 
 .box0 {
     width: 325px;
@@ -163,7 +164,7 @@ box-shadow: inset 0px 0px 7px 4px rgba(51, 87, 58, 0.7);
     border-radius: 5px;
 }
 
-#textStyleHomepage{
+#textStyleHomepage {
     text-align: center;
     
 }
@@ -195,19 +196,15 @@ box-shadow: inset 0px 0px 7px 4px rgba(51, 87, 58, 0.7);
 
 /*Ici je vais gérer mes grids*/
 
-
 /* CSS LOGO à faire plus tard après le placement des boutons */
-
 
 /* .kidiLogo {
     height: 25%;
     width: 25%;
     border: solid black
-} 
+}
 
-*/
-
-/* img.logo {
+img.logo {
     height: 30vh;
     width: 30vh;
     border: solid black;

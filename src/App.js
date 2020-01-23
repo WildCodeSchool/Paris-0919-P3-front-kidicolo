@@ -20,7 +20,6 @@ const App = () => {
     <div className="App">
       <BrowserRouter>
       
-      <Navbar />
         <Switch>
           <Route exact path="/" component={UserLogin} />
           <Route path="/settingsuser" component={UserSettings} />
