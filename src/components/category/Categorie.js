@@ -84,12 +84,14 @@ class Categorie extends Component {
           <SearchBar searchChange={this.onSearchChange} />
           {this.state.article.map((elem, i) => <p key={i}>{elem.name}</p>)}
         </div>
-        <div>
+        <div className="container">
+          <div className="row mx-auto">
           {articles &&
             articles.map(article => {
               console.log("article", article);
               return <DisplayArticle article={article} />
             })}
+            </div>
         </div>
       </div>
     );

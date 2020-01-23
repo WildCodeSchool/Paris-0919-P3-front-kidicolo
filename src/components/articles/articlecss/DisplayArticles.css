@@ -1,8 +1,35 @@
-.DisplayArticleCard{
-    width: 18rem;
+/* .DisplayArticleCard{
+    width: auto;
 }
 
 .imgCardArticle {
+    width: auto;
+    height: 180px;
+} */
+
+.card{
+    width: 15rem;
+}
+
+.card-img-top {
+    width: auto;
+    height: 180px;
+}
+
+.btnArticle {
     
-    height: 10rem;
+    margin-top: auto;
+    
+    background: #662381;
+    color: #ffffff;
+}
+
+.btnArticle:hover {
+    background: #ffffff;
+    color: #662381;
+    border: 1px solid #662381;
+}
+
+.card-title {
+    color: #662381;
 }
