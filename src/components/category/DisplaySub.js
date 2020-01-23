@@ -5,9 +5,9 @@ import DisplayArticle from "../articles/DisplayArticle";
 
 const DisplaySub = ({ subcategorys, handleChange }) => {
   const id = subcategorys;
-  const [select, setSelect] = useState();
-  const [subCategories, setSubbCategories] = useState();
-  const [article, setArticle] = useState();
+  // const [select, setSelect] = useState();
+  // const [subCategories, setSubbCategories] = useState();
+  // const [article, setArticle] = useState();
   console.log('subcat id',id);
   return (
     <div className="main-container">
