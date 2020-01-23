@@ -9,9 +9,9 @@ class AddArticle extends Component {
     price: 0,
     sold: 0,
     name: "",
-    id_state: null,
+    id_state: 1,
     id_user_vendeur: 2,
-    id_photoart: "",
+    id_photoart: 1,
     categoriesList: [],
     subcategoriesList: [],
     agesList: [],
@@ -25,52 +25,48 @@ class AddArticle extends Component {
   };
 
   handleSubmit = e => {
-    const categories = this.state.categories.map(categorie => {
-      return categorie.id
-    })
+    e.preventDefault();
 
-    const subCategories = this.state.subCategories.map(subCategorie => {
-      return subCategorie.id
-    })
+    const categories = this.state.categories.map(categorie => {
+      return categorie.id;
+    });
+
+    const subCategories = this.state.subcategories.map(subCategorie => {
+      return subCategorie.id;
+    });
 
     const ages = this.state.ages.map(age => {
-      return age.id
-    })
+      return age.id;
+    });
 
     const genders = this.state.genders.map(gender => {
-      return gender.id
-    })
+      return gender.id;
+    });
 
     const states = this.state.states.map(state => {
-      return state.id
-    })
+      return state.id;
+    });
 
     const body = {
-      brand: this.state.brand,
-      description: this.state.description,
-      price: this.state.price,
-      sold: this.state.sold,
-      name: this.state.name,
-      id_state: this.state.id_state,
-      id_user_vendeur: this.state.id_user_vendeur,
-      id_photoart: this.state.id_photoart,
+      article: {
+        brand: this.state.brand,
+        description: this.state.description,
+        price: this.state.price,
+        sold: this.state.sold,
+        name: this.state.name,
+        id_state: states[0],
+        id_user_acheteur: null,
+        id_user_vendeur: this.state.id_user_vendeur,
+        id_photoart: this.state.id_photoart
+      },
       categories: categories,
       subcategories: subCategories,
-      ages: ages,
-      states: states,
       genders: genders,
-    }
-    axios.post("/article/addarticle", {
-      
-      body,
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      }
-    })
-      e.preventDefault();
-  };
+      ages: ages
+    };
 
+    axios.post("/article/addarticle", body);
+  };
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
@@ -107,36 +103,36 @@ class AddArticle extends Component {
     );
   };
 
-  getSubcategorie() {
+  getSubcategorie = () => {
     axios.get("/subcategory").then(res => {
       this.setState({ subcategoriesList: res.data });
     });
-  }
+  };
 
-  getStateOfArticle() {
+  getStateOfArticle = () => {
     axios.get("/statearticle").then(res => {
       this.setState({ stateList: res.data });
     });
-  }
+  };
 
-  getCategorie() {
+  getCategorie = () => {
     axios.get("/category").then(res => {
       this.setState({ categoriesList: res.data });
     });
-  }
+  };
 
-  getGender() {
+  getGender = () => {
     axios.get("/gender").then(res => {
       this.setState({ gendersList: res.data });
       console.log(this.state);
     });
-  }
-  getAge() {
+  };
+  getAge = () => {
     axios.get("/age").then(res => {
       this.setState({ agesList: res.data });
       console.log(this.state);
     });
-  }
+  };
   componentDidMount() {
     this.getAge();
     this.getGender();
