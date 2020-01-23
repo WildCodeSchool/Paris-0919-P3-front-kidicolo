@@ -3,6 +3,7 @@ import axios from "axios";
 import DisplaySub from "./DisplaySub";
 import DisplayArticle from "../articles/DisplayArticle";
 import SearchBar from "../searchbar/Searchbar"
+import './Categorie.css'
 
 class Categorie extends Component {
   state = {
