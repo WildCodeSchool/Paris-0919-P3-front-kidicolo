@@ -12,7 +12,7 @@ const DisplayArticle = ({ article }) => {
     photoGet()
   }, [])
   
-  console.log("I AM HERE !!!!!!", photo.photourl)
+  console.log("I AM HERE !!!!!!", photo)
   return (
     <div>
       <img src={photo} alt="Card cap" />

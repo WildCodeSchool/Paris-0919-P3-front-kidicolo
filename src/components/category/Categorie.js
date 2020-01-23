@@ -2,13 +2,34 @@ import React, { Component } from "react";
 import axios from "axios";
 import DisplaySub from "./DisplaySub";
 import DisplayArticle from "../articles/DisplayArticle";
+import SearchBar from "../searchbar/Searchbar"
 
 class Categorie extends Component {
   state = {
     subcategory: [],
-    articles: null
+    articles: null,
+    article: [],
+    search: ""
   };
 
+  onSearchChange = e => {
+    console.log(e.target.value)
+    this.setState({ [e.target.name]: e.target.value }, () => {
+      if (this.state.search && this.state.search.length > 1) {
+        clearTimeout(this.timeOut)
+        this.timeOut = setTimeout(() => {
+
+          // if ()
+          axios
+            .post(`http://localhost:5000/article/search/`, { name: this.state.search })
+            .then((res) => {
+              this.setState({ article: res.data })
+              return res
+            })
+        }, 400)
+      }
+    })
+  }
   getSubcategory = () => {
     const {
       match: { params }
@@ -44,25 +65,24 @@ class Categorie extends Component {
     this.setState({ articles: resultData.data });
   };
 
+
   componentDidMount() {
     this.getSubcategory();
   }
   render() {
-    const {subcategory, articles} = this.state
+    const { subcategory, articles } = this.state
     console.log(this.state.subcategory);
-    console.log('yoloArticle :', articles )
+    console.log('yoloArticle :', articles)
     return (
       <div className="containerSubcategory">
-        {/* {this.state.subcategory.map(subcategorys => (
-          <DisplaySub subcategorys={subcategorys} key={subcategorys.id} />
-        ))} */}
-
         <DisplaySub
           subcategorys={subcategory}
           handleChange={this.handleChange}
         />
-        {/* <DisplayArticle /> */}
-        {/* {JSON.stringify(articles)} */}
+        <div className="searchBar">
+          <SearchBar searchChange={this.onSearchChange} />
+          {this.state.article.map((elem, i) => <p key={i}>{elem.name}</p>)}
+        </div>
         <div>
           {articles &&
             articles.map(article => {
