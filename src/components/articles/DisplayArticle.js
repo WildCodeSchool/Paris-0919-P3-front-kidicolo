@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import '../articles/articlecss/DisplayArticles.css'
+import '../articles/articlecss/DisplayArticles.css';
+
 
 const DisplayArticle = ({ article }) => {
   // console.log(article);
@@ -24,7 +25,7 @@ const DisplayArticle = ({ article }) => {
         <p className="card-text">{article.description}</p>
         <h5 className="card-title">{article.price}€</h5>
         <p>{article.id_user_vendeur.firstname}</p>
-        <a href="..." className="align-self-end btn btn-block btn btnArticle">Voir l'article</a>
+        <a href={"..."} className="align-self-end btn btn-block btn btnArticle">Voir l'article</a>
       </div>
     </div>
   );
