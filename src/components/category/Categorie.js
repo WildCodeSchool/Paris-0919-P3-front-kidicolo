@@ -10,27 +10,26 @@ class Categorie extends Component {
     articles: null,
     article: [],
     search: "",
-    idSubcat:[]
+    idSubcat: null
   };
 
   onSearchChange = e => {
-    console.log(e.target.value)
     this.setState({ [e.target.name]: e.target.value }, () => {
       if (this.state.search && this.state.search.length > 1) {
         clearTimeout(this.timeOut)
         this.timeOut = setTimeout(() => {
-
-          // if ()
           axios
-            .post(`http://localhost:5000/article/search/`, { idSubcat: this.state.idSubcat }, { name: this.state.search })
+            .post(`http://localhost:5000/article/search/`, [{idSubcat : this.state.idSubcat}, { name: this.state.search }])
             .then((res) => {
-              this.setState({ article: res.data })
+              this.setState({ articles: res.data })
               return res
             })
         }, 400)
       }
     })
   }
+
+
   getSubcategory = () => {
     const {
       match: { params }
@@ -56,12 +55,10 @@ class Categorie extends Component {
     axios.get(`/subcategory/${url}`).then(res => {
       this.setState({ subcategory: res.data });
     });
-    console.log(url);
   };
 
   handleChange = async id => {
     const resultData = await axios.get(`/article/subcat/${id}`);
-    console.log(resultData.data);
     this.setState({ articles: resultData.data });
     this.setState({idSubcat : id })
   };
@@ -72,9 +69,6 @@ class Categorie extends Component {
   }
   render() {
     const { subcategory, articles } = this.state
-    console.log("idSubcat :",this.state.idSubcat)
-    console.log('yoloSubcategorie :', subcategory);
-    console.log('yoloArticle :', articles)
     return (
       <div className="containerSubcategory">
         <DisplaySub
@@ -88,7 +82,6 @@ class Categorie extends Component {
         <div>
           {articles &&
             articles.map(article => {
-              console.log("article", article);
               return <DisplayArticle article={article} />
             })}
         </div>
