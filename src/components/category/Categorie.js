@@ -72,7 +72,7 @@ class Categorie extends Component {
   }
   render() {
     const { subcategory, articles } = this.state
-    console.log("lol",this.state.idSubcat)
+    console.log("idSubcat :",this.state.idSubcat)
     console.log('yoloSubcategorie :', subcategory);
     console.log('yoloArticle :', articles)
     return (
