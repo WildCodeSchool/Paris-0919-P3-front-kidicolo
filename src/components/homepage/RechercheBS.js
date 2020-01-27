@@ -8,6 +8,7 @@ import { NavLink } from "react-router-dom";
 const RechercheBS = () => {
     return (
         <div>
+            
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <img src={Logo} className="navbar-brand logoKidicoloSearchBar" alt='logo Kidicolo' />
                 
@@ -23,6 +24,7 @@ const RechercheBS = () => {
                     </form>
                 </div>
             </nav>
+            
         </div>
             );
           };
