@@ -4,7 +4,6 @@ import '../articles/articlecss/DisplayArticles.css';
 
 
 const DisplayArticle = ({ article }) => {
-  // console.log(article);
   const [photo, setPhoto] = useState("")
 
   useEffect(() => {

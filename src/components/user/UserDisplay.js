@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/img/homepage/logo.png"
 
 const UserDisplay = users => {
-  console.log(users);
   return (
     <div className="containerUserDisplay">
       <img className = "logoKidicolo" src  = {logo} alt="Logokidicolo" />

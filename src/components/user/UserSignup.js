@@ -38,7 +38,6 @@ class UserSignup extends Component {
 
   /////////////////////////////////////////////////////////
   render() {
-    console.log(this.state);
     return (
       <div className="containerSettingsSignUp">
         <img src={Logo} className="logoK" alt="Logo Kidicolo" />

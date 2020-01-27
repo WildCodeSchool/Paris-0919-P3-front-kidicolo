@@ -25,7 +25,6 @@ class UserLogin extends Component {
   }
 
   render() {
-    console.log(axios)
     return (
       
       <div className="containerLogin">
