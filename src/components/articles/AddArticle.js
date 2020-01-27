@@ -11,7 +11,7 @@ class AddArticle extends Component {
     name: "",
     id_state: 1,
     id_user_vendeur: 2,
-    id_photoart: 1,
+    id_photoart: null,
     categoriesList: [],
     subcategoriesList: [],
     agesList: [],
@@ -57,12 +57,12 @@ class AddArticle extends Component {
         id_state: states[0],
         id_user_acheteur: null,
         id_user_vendeur: this.state.id_user_vendeur,
-        id_photoart: this.state.id_photoart
       },
       categories: categories,
       subcategories: subCategories,
       genders: genders,
-      ages: ages
+      ages: ages,
+      urlPhoto : this.state.id_photoart
     };
 
     axios.post("/article/addarticle", body);
@@ -96,10 +96,7 @@ class AddArticle extends Component {
     });
 
     this.setState(
-      { [event.target.name]: this.state[event.target.name].concat(tmp) },
-      () => {
-        console.log("poil", this.state);
-      }
+      { [event.target.name]: this.state[event.target.name].concat(tmp) }
     );
   };
 
