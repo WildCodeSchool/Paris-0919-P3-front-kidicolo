@@ -20,12 +20,10 @@ class Categorie extends Component {
       if (this.state.search && this.state.search.length > 1) {
         clearTimeout(this.timeOut)
         this.timeOut = setTimeout(() => {
-
-          // if ()
           axios
             .post(`http://localhost:5000/article/search/`, [{ idSubcat: this.state.idSubcat }, { name: this.state.search }])
             .then((res) => {
-              this.setState({ article: res.data })
+              this.setState({ articles: res.data })
               return res
             })
         }, 400)

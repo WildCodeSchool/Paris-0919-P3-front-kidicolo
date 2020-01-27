@@ -20,12 +20,6 @@ const Homepage = () => {
           
         );
       })}
-
-
-        {/* <NavLink className="box1" to={`/categorie/${id[0]}`}><h1>Vetements</h1></NavLink>
-        <NavLink className="box2" to={`/categorie/${id[1]}`}><h1>Puericulture</h1></NavLink>
-        <NavLink  className="box3" to={`/categorie/${id[2]}`}><h1>Jeux/Jouets</h1></NavLink>
-        <NavLink className = "box4" to={`/categorie/${id[3]}`}><h1>Education</h1></NavLink> */}
     </div>
     </div>
   );

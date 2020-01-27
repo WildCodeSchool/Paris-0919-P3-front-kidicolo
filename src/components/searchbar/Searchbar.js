@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Logo from "../../assets/img/logo/Logo_Transparant4.png"
-import axios from 'axios'
 import './Searchbar.css'
 
-const Searchbar = ({ article, searchChange }) => {
-
+const Searchbar = ({searchChange }) => {
         return (
         <div>
                 

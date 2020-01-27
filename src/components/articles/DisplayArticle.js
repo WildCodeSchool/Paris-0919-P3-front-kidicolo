@@ -9,12 +9,11 @@ const DisplayArticle = ({ article }) => {
 
   useEffect(() => {
     const photoGet = () => {
-      axios.get(`/photo/${article.id_photoart}`).then(res => console.log("++++---+++", res.data[0].photourl) || setPhoto(res.data[0].photourl))
+      axios.get(`/photo/${article.id_photoart}`).then(res =>  setPhoto(res.data[0].photourl))
     }
     photoGet()
-  }, [])
+  })
 
-  console.log("I AM HERE !!!!!!", photo)
   return (
     <div className="card my-3 mx-3">
       <img className="card-img-top" src={photo} alt="Card cap" />
@@ -31,32 +30,5 @@ const DisplayArticle = ({ article }) => {
   );
 };
 
-  //     if(params.id === "Chaussures"){
-  //       console.log("C'est ca gros")
-  //     }
-  //     axios.get(`/article/subcat/${idarticle}`)
-  //       .then(res => {
-  //         this.setState({ articles: res.data })
-  //       });
-  //   }
-  //   componentDidMount() {
-  //     this.getArticle()
-  //   }
-
-  //   render() {
-  //     console.log(this.state.articles)
-  //     console.log(this.props)
-      
-  //     return (
-  //         <div className="containerSubcategory">
-  //           {this.state.articles.map(article => (
-  //             < DisplayAllArticle article={article} key={article.id} />
-  //           ))
-  //           }
-  //         </div>
-
-  //     );
-  //   }
-  // }
   
   export default DisplayArticle
