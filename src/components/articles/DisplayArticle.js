@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const DisplayArticle = ({ article }) => {
-  // console.log(article);
   const [photo, setPhoto] = useState("");
 
   useEffect(() => {

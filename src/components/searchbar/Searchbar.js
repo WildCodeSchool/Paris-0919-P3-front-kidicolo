@@ -1,5 +1,5 @@
-import React, {useState, useEffect}from 'react'
-import axios from 'axios'
+import React from 'react'
+
 
 const Searchbar = ({ article, searchChange }) => {
     
@@ -11,9 +11,6 @@ const Searchbar = ({ article, searchChange }) => {
                 class="searchTerm"
                 placeholder="recherche"
                 onChange={searchChange}
-                // 
-                // onChange={(e) => setSearchTerm(e.target.value)}
-            // onClick={this.handleClick}
             />
         </div>
     )
