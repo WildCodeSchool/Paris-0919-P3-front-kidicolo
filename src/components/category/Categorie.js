@@ -10,7 +10,8 @@ class Categorie extends Component {
     subcategory: [],
     articles: null,
     article: [],
-    search: ""
+    search: "",
+    idSubcat: null
   };
 
   onSearchChange = e => {
@@ -22,7 +23,7 @@ class Categorie extends Component {
 
           // if ()
           axios
-            .post(`http://localhost:5000/article/search/`, { name: this.state.search })
+            .post(`http://localhost:5000/article/search/`, [{ idSubcat: this.state.idSubcat }, { name: this.state.search }])
             .then((res) => {
               this.setState({ article: res.data })
               return res
@@ -60,10 +61,10 @@ class Categorie extends Component {
   };
 
   handleChange = async id => {
-    console.log("ta mere le poulet !!!!!!! !!! !!! !!!", id);
     const resultData = await axios.get(`/article/subcat/${id}`);
     console.log(resultData.data);
     this.setState({ articles: resultData.data });
+    this.setState({ idSubcat: id });
   };
 
 
@@ -76,23 +77,23 @@ class Categorie extends Component {
     console.log('yoloArticle :', articles)
     return (
       <div className="containerSubcategory">
-        <div className="searchBar">
-          <SearchBar searchChange={this.onSearchChange} />
-          {this.state.article.map((elem, i) => <p key={i}>{elem.name}</p>)}
-        </div>
         <DisplaySub
           subcategorys={subcategory}
           handleChange={this.handleChange}
         />
-        
+        <div className="searchBar">
+          <SearchBar searchChange={this.onSearchChange} />
+          {this.state.article.map((elem, i) => <p key={i}>{elem.name}</p>)}
+        </div>
+
         <div className="container">
           <div className="row mx-auto">
-          {articles &&
-            articles.map(article => {
-              console.log("article", article);
-              return <DisplayArticle article={article} />
-            })}
-            </div>
+            {articles &&
+              articles.map(article => {
+                console.log("article", article);
+                return <DisplayArticle article={article} />
+              })}
+          </div>
         </div>
       </div>
     );
