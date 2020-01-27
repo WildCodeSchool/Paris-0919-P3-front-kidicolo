@@ -124,13 +124,11 @@ class AddArticle extends Component {
   getGender = () => {
     axios.get("/gender").then(res => {
       this.setState({ gendersList: res.data });
-      console.log(this.state);
     });
   };
   getAge = () => {
     axios.get("/age").then(res => {
       this.setState({ agesList: res.data });
-      console.log(this.state);
     });
   };
   componentDidMount() {

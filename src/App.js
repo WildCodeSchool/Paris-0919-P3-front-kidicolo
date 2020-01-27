@@ -21,11 +21,11 @@ const App = () => {
       <BrowserRouter>
       
         <Switch>
-          <Route exact path="/" component={UserLogin} />
+          <Route exact path="/" component={Homepage} />
           <Route path="/settingsuser" component={UserSettings} />
           <Route path="/usersignup" component={UserSignup} />
           <Route path="/user" component={User} />
-          <Route path="/homepage" component={Homepage} />
+          <Route path="/userlogin" component={UserLogin} />
           <Route path="/categorie/:id" component={Categorie} />
           <Route path="/subcategorie/:id" component={DisplaySub} />
           <Route path="/displayarticle/:id" component={DisplayArticle} />

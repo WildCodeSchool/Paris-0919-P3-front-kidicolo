@@ -19,7 +19,6 @@ class User extends Component {
     this.getUser()
   }
   render() {
-    console.log(this.state.user)
     return (
       <div>
           {this.state.user.map(users =>(

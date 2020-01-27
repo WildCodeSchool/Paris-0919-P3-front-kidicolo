@@ -17,7 +17,6 @@ class UserSettings extends Component {
   getUser() {
     axios.get(`/adduser/getinfo/21`).then(res => {
       this.setState({...res.data[0] });
-      console.log(res.data[0]);
     });
   }
 
@@ -49,7 +48,6 @@ class UserSettings extends Component {
 
   /////////////////////////////////////////////////////////
   render() {
-    console.log(this.state);
     return (
       <div className="containerSettings">
         <form className="formClass" onSubmit={this.handleSubmit}>
