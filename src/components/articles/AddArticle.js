@@ -184,7 +184,7 @@ class AddArticle extends Component {
 
             <div className="form-group">
             <label for="exampleFormControlSelect1">Nom</label>
-          <input className="form-control"
+            <input className="form-control"
               require
               type="text"
               name="name"
@@ -301,42 +301,62 @@ class AddArticle extends Component {
           
         </form> */}
 
-        <form className="formClassAddArticle" onSubmit={this.handleSubmit}>
-          <h3>Ajouter un article</h3>
-          Marque:
-          <input
-            require
-            onChange={this.handleChange}
-            placeholder="Marque"
-            type="text"
-            name="brand"
-          />
-          Description:
-          <textarea
-            require
-            type="textarea"
-            name="description"
-            onChange={this.handleChange}
-            placeholder="Description du produit"
-          />
-          Prix:
-          <input
-            require
-            type="text"
-            name="price"
-            onChange={this.handleChange}
-            placeholder="Prix"
-          />
-          Etat:
+        <form onSubmit={this.handleSubmit} className='container'>
+          <h3 className="titreAjoutArticle">Ajouter un article</h3>
+
+          <div className="form-group">
+            <label for="exampleFormControlSelect1">Nom</label>
+            <input className="form-control"
+              require
+              type="text"
+              name="name"
+              onChange={this.handleChange}
+              placeholder="Nom de l'article"
+            />
+          </div>
+
+          <div className="form-group">
+            <label for="exampleFormControlTextarea1">Marque</label>
+          <input className="form-control"
+              require
+              onChange={this.handleChange}
+              placeholder="Marque"
+              type="text"
+              name="brand"
+            />
+          </div>
+
+          <div className="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" require
+              type="textarea"
+              name="description"
+              onChange={this.handleChange}
+              placeholder="Description du produit"/>
+          </div>
+
+          <div className="form-group">
+          <label for="exampleFormControlSelect1">Prix</label>
+          <input className="form-control"
+              require
+              type="text"
+              name="price"
+              onChange={this.handleChange}
+              placeholder="Prix"
+            />
+          </div>
+          
+        <div className="form-group list-unstyled">
+        <label for="exampleFormControlSelect1">Etat</label>
           <div>
-            <select
+            <select className="form-control" id="exampleFormControlSelect1"
               require
               type="text"
               name="states"
               onChange={this.handleChangeSelect}
-              placeholder="Etats ..."
+              placeholder="Etat…"
             >
-              <option>--Selectionez un Etat--</option>
+              <option>Sélectionnez un état</option>
               {this.state.stateList &&
                 this.state.stateList.map(data => (
                   <option value={data.id}>{data.name}</option>
@@ -347,7 +367,7 @@ class AddArticle extends Component {
                 <li className="listElements">
                   {card.name}
                   <button
-                    className="x"
+                    className="btn btn-light my-2 mx-2"
                     onClick={() => this.handleClickStat(card)}
                   >
                     X
@@ -356,36 +376,29 @@ class AddArticle extends Component {
               );
             })}
           </div>
-          Nom:
-          <input
-            require
-            type="text"
-            name="name"
-            onChange={this.handleChange}
-            placeholder="Nom de l'article"
-          />
+          </div>
 
-          Catégorie :
-          <div>
-            <select
+          <div className="form-group list-unstyled">
+            <label for="exampleFormControlSelect1">Catégorie</label>
+
+            <select className="form-control" id="exampleFormControlSelect1"
               require
-              type="text"
+              type="checkbox"
               name="categories"
               placeholder="Enter your address"
               onChange={this.handleChangeSelect}
             >
-              <option>--Selectionez une Catégorie--</option>
-              {this.state.categoriesList &&
-                this.state.categoriesList.map(data => (
-                  <option value={data.id}>{data.name}</option>
-                ))}
+              <option>Sélectionnez une catégorie</option>
+              {this.state.categoriesList.map((data) => (
+                <option value={data.id}>{data.name}</option>
+              ))}
             </select>
             {this.state.categories.map(card => {
               return (
                 <li className="listElements">
                   {card.name}
                   <button
-                    className="x"
+                    className="btn btn-light my-2 mx-2"
                     onClick={() => this.handleClickCat(card)}
                   >
                     X
@@ -393,46 +406,50 @@ class AddArticle extends Component {
                 </li>
               );
             })}
-          </div>
-          Subcategories :
-          <div>
-            <select
+          
+          </div>          
+
+
+          <div className="form-group list-unstyled">
+            <label for="exampleFormControlSelect1">Sous-catégorie</label>
+
+            <select className="form-control"
               require
               type="text"
               name="subcategories"
               placeholder="Enter your address"
               onChange={this.handleChangeSelect}
-            >
-              <option>--Selectionez une Sous-Catégorie--</option>
-              {this.state.subcategoriesList &&
-                this.state.subcategoriesList.map(data => (
-                  <option value={data.id}>{data.name}</option>
-                ))}
-            </select>
-            {this.state.subcategories.map(card => {
-              return (
-                <li className="listElements">
-                  {card.name}
-                  <button
-                    className="x"
-                    onClick={() => this.handleClickSub(card)}
-                  >
-                    X
-                  </button>
-                </li>
-              );
-            })}
+            ><option>Sélectionnez une sous-catégorie</option>
+            {this.state.subcategoriesList &&
+              this.state.subcategoriesList.map(data => (
+                <option value={data.id}>{data.name}</option>
+              ))}
+          </select>
+          {this.state.subcategories.map(card => {
+            return (
+              <li className="listElements">
+                {card.name}
+                <button
+                  className="btn btn-light my-2 mx-2"
+                  onClick={() => this.handleClickSub(card)}
+                >
+                  X
+                </button>
+              </li>
+            );
+          })}
           </div>
-          Age:
-          <div>
-            <select
+
+          <div className="form-group list-unstyled">
+            <label for="exampleFormControlSelect1">Age</label>
+            <select className="form-control"
               require
               type="text"
               name="ages"
               placeholder="Enter your address"
               onChange={this.handleChangeSelect}
             >
-              <option>--Selectionez un Age--</option>
+             <option>Sélectionnez un age</option>
               {this.state.agesList &&
                 this.state.agesList.map(data => (
                   <option value={data.id}>{data.age}</option>
@@ -443,7 +460,7 @@ class AddArticle extends Component {
                 <li className="listElements">
                   {card.age}
                   <button
-                    className="x"
+                    className="btn btn-light my-2 mx-2"
                     onClick={() => this.handleClickAge(card)}
                   >
                     X
@@ -451,43 +468,49 @@ class AddArticle extends Component {
                 </li>
               );
             })}
-          </div>
-          Gender:
-          <div>
-            <select
-              require
-              type="text"
-              name="genders"
-              onChange={this.handleChangeSelect}
-            >
-              <option>--Selectionez un Genre--</option>
-              {this.state.gendersList &&
-                this.state.gendersList.map(data => (
-                  <option value={data.id}>{data.gender}</option>
-                ))}
-            </select>
-            {this.state.genders.map(card => {
-              return (
-                <li className="listElements">
-                  {card.gender}
-                  <button
-                    className="x"
-                    onClick={() => this.handleClickGen(card)}
-                  >
-                    X
-                  </button>
-                </li>
-              );
-            })}
-          </div>
-          Photo:
-          <input
+            </div>
+
+            <div className="form-group list-unstyled">
+            <label for="exampleFormControlSelect1">Sexe</label>
+            <select className="form-control"
+          require
             type="text"
+            name="genders"
+            onChange={this.handleChangeSelect}
+          >
+            <option>Sélectionnez un sexe</option>
+          {this.state.gendersList &&
+            this.state.gendersList.map(data => (
+              <option value={data.id}>{data.gender}</option>
+            ))}
+        </select>
+        {this.state.genders.map(card => {
+          return (
+            <li className="listElements">
+              {card.gender}
+              <button
+                className="btn btn-light my-2 mx-2"
+                onClick={() => this.handleClickGen(card)}
+              >
+                X
+              </button>
+            </li>
+          );
+        })}
+          </div>
+
+          <div className="form-group list-unstyled">
+          <label for="exampleFormControlSelect1">Photo</label>
+            <input className="form-control"
+            type="url"
             name="id_photoart"
             onChange={this.handleChange}
-            placeholder="Enter the url of the photo"
+            placeholder="Copier l'url de la photo"
           />
-          <input className="submitButton" type="submit" value="Add" />
+          </div>
+          <button className="btn btn-success mb-5 submitButton" type="submit"  value="Add">Ajouter</button>
+
+          
         </form>
       </div>
     );
