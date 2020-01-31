@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import axios from "axios";
 import DisplaySub from "./DisplaySub";
 import DisplayArticle from "../articles/DisplayArticle";
-import SearchBar from "../searchbar/Searchbar"
-import './Categorie.css'
+import SearchBar from "../searchbar/Searchbar";
+import "./Categorie.css";
+import Logo from "../../assets/img/logo/Logo_Transparant4.png";
 
 class Categorie extends Component {
   state = {
@@ -17,18 +18,21 @@ class Categorie extends Component {
   onSearchChange = e => {
     this.setState({ [e.target.name]: e.target.value }, () => {
       if (this.state.search && this.state.search.length > 1) {
-        clearTimeout(this.timeOut)
+        clearTimeout(this.timeOut);
         this.timeOut = setTimeout(() => {
           axios
-            .post(`http://localhost:5000/article/search/`, [{ idSubcat: this.state.idSubcat }, { name: this.state.search }])
-            .then((res) => {
-              this.setState({ articles: res.data })
-              return res
-            })
-        }, 400)
+            .post(`http://localhost:5000/article/search/`, [
+              { idSubcat: this.state.idSubcat },
+              { name: this.state.search }
+            ])
+            .then(res => {
+              this.setState({ articles: res.data });
+              return res;
+            });
+        }, 400);
       }
-    })
-  }
+    });
+  };
   getSubcategory = () => {
     const {
       match: { params }
@@ -62,28 +66,33 @@ class Categorie extends Component {
     this.setState({ idSubcat: id });
   };
 
-
   componentDidMount() {
     this.getSubcategory();
   }
   render() {
-    const { subcategory, articles } = this.state
+    const { subcategory, articles } = this.state;
     return (
       <div className="containerSubcategory">
-        <DisplaySub
-          subcategorys={subcategory}
-          handleChange={this.handleChange}
+        <img
+          src={Logo}
+          className="navbar-brand logoKidicoloSearchBar"
+          alt="logo Kidicolo"
         />
         <div className="searchBar">
           <SearchBar searchChange={this.onSearchChange} />
-          {this.state.article.map((elem, i) => <p key={i}>{elem.name}</p>)}
+          {/* {this.state.article.map((elem, i) => <p key={i}>{elem.name}</p>)} */}
+
+          <DisplaySub
+            subcategorys={subcategory}
+            handleChange={this.handleChange}
+          />
         </div>
 
         <div className="container">
-          <div className="row mx-auto">
+          <div className="row mx-auto my-5">
             {articles &&
               articles.map(article => {
-                return <DisplayArticle article={article} />
+                return <DisplayArticle article={article} />;
               })}
           </div>
         </div>

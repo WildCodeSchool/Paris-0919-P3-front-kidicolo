@@ -10,6 +10,9 @@ class UserLogin extends Component {
     password: "",
   };
 
+
+  ////LocalStorage///
+
   handleChange = (event) =>  {
     this.setState({[event.target.name]: event.target.value });
   }
@@ -18,8 +21,10 @@ class UserLogin extends Component {
     axios.post("adduser/login" , {
       mail:this.state.mail,
       password: this.state.password
-    }).then(res=> {
-      console.log(res)
+    }).then(res => {
+      console.log(Object.keys(res.headers));
+      
+      localStorage.setItem('token', res.headers.token)
     })
       e.preventDefault();
   }
@@ -44,7 +49,7 @@ class UserLogin extends Component {
             onChange={this.handleChange}
             placeholder="Your Password"
           />
-      <Link to="/user"><button  type="submit" className="btnSeconnecter">Se connecter !</button></Link>
+      <Link to ="/userdisplay"><button  type="submit" className="btnSeconnecter">Se connecter !</button></Link>
       <Link to="/usersignup" ><button className="btnPasDeCompte"> Je n'ai pas de compte ?</button></Link>
         </form>
       </div>

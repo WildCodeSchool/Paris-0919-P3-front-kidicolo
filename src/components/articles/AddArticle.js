@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import Logo from '../../assets/img/logo/logoK.png'
-import '../articles/articlecss/AddArticle.css'
+import Logo from "../../assets/img/logo/logoK.png";
+import "../articles/articlecss/AddArticle.css";
 
 import axios from "axios";
 
@@ -59,13 +59,13 @@ class AddArticle extends Component {
         name: this.state.name,
         id_state: states[0],
         id_user_acheteur: null,
-        id_user_vendeur: this.state.id_user_vendeur,
+        id_user_vendeur: this.state.id_user_vendeur
       },
       categories: categories,
       subcategories: subCategories,
       genders: genders,
       ages: ages,
-      urlPhoto : this.state.id_photoart
+      urlPhoto: this.state.id_photoart
     };
 
     axios.post("/article/addarticle", body);
@@ -98,9 +98,9 @@ class AddArticle extends Component {
       return item.id == event.target.value;
     });
 
-    this.setState(
-      { [event.target.name]: this.state[event.target.name].concat(tmp) }
-    );
+    this.setState({
+      [event.target.name]: this.state[event.target.name].concat(tmp)
+    });
   };
 
   getSubcategorie = () => {
@@ -177,136 +177,12 @@ class AddArticle extends Component {
     return (
       <div className="containerSettings">
         <img src={Logo} className="logoK" alt="Logo Kidicolo" />
-
-
-        {/* <form onSubmit={this.handleSubmit} className='container'>
-            <h3 className="titreAjoutArticle">Ajouter un article</h3>
-
-            <div className="form-group">
-            <label for="exampleFormControlSelect1">Nom</label>
-            <input className="form-control"
-              require
-              type="text"
-              name="name"
-              onChange={this.handleChange}
-              placeholder="Nom de l'article"
-            />
-          </div>
-
-          <div className="form-group">
-            <label for="exampleFormControlTextarea1">Marque</label>
-          <input className="form-control"
-              require
-              onChange={this.handleChange}
-              placeholder="Marque"
-              type="text"
-              name="brand"
-            />
-          </div>
-
-          
-
-          <div className="form-group">
-            <label for="exampleFormControlTextarea1">Description</label>
-            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" require
-              type="textarea"
-              name="description"
-              onChange={this.handleChange}
-              placeholder="Description du produit"/>
-          </div>
-
-          <div className="form-group">
-          <label for="exampleFormControlSelect1">Prix</label>
-          <input className="form-control"
-              require
-              type="text"
-              name="price"
-              onChange={this.handleChange}
-              placeholder="Prix"
-            />
-          </div>
-
-          
-          <div className="form-group">
-            <label for="exampleFormControlSelect1">Catégorie</label>
-
-            <select className="form-control" id="exampleFormControlSelect1"
-              require
-              type="checkbox"
-              name="categories"
-              placeholder="Enter your address"
-              onChange={this.handleChange}
-            >
-              {this.state.categoriesList.map((data) => (
-                <option value={data.id}>{data.name}</option>
-              ))}
-            </select>
-          </div>
-
-          <div className="form-group">
-            <label for="exampleFormControlSelect1">Sous-catégorie</label>
-
-            <select className="form-control"
-              require
-              type="text"
-              name="subcategories"
-              placeholder="Enter your address"
-              onChange={this.handleChange}
-            >
-              {this.state.subcategoriesList.map((data) => (
-                <option value={data.id}>{data.name}</option>
-              ))}
-            </select>
-          </div>
-
-          <div className="form-group">
-            <label for="exampleFormControlSelect1">Age</label>
-            <select className="form-control"
-              require
-              type="text"
-              name="ages"
-              placeholder="Enter your address"
-              onChange={this.handleChange}
-            >
-              {this.state.agesList.map((data) => (
-                <option value={data.id}>{data.age}</option>
-              ))}
-            </select>
-          </div>
-
-          <div className="form-group">
-            <label for="exampleFormControlSelect1">Sexe</label>
-            <select className="form-control"
-          require
-            type="text"
-            name="genders"
-            onChange={this.handleChange}
-          >
-               {this.state.gendersList.map((data) => (
-             <option value={data.id}>{data.gender}</option>
-            ))}
-          </select>
-          </div>
-          
-          <div className="form-group">
-          <label for="exampleFormControlSelect1">Photo</label>
-            <input className="form-control"
-            type="url"
-            name="id_photoart"
-            onChange={this.handleChange}
-            placeholder="Copier l'url de la photo"
-          />
-          </div>
-          <button className="btn btn-success mb-5 submitButton" type="submit"  value="Add">Ajouter</button>
-          
-        </form> */}
-
-        <form onSubmit={this.handleSubmit} className='container'>
+        <form onSubmit={this.handleSubmit} className="container">
           <h3 className="titreAjoutArticle">Ajouter un article</h3>
-
           <div className="form-group">
             <label for="exampleFormControlSelect1">Nom</label>
-            <input className="form-control"
+            <input
+              className="form-control"
               require
               type="text"
               name="name"
@@ -317,7 +193,8 @@ class AddArticle extends Component {
 
           <div className="form-group">
             <label for="exampleFormControlTextarea1">Marque</label>
-          <input className="form-control"
+            <input
+              className="form-control"
               require
               onChange={this.handleChange}
               placeholder="Marque"
@@ -328,16 +205,22 @@ class AddArticle extends Component {
 
           <div className="form-group">
             <label for="exampleFormControlTextarea1">Description</label>
-            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" require
+            <textarea
+              className="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              require
               type="textarea"
               name="description"
               onChange={this.handleChange}
-              placeholder="Description du produit"/>
+              placeholder="Description du produit"
+            />
           </div>
 
           <div className="form-group">
-          <label for="exampleFormControlSelect1">Prix</label>
-          <input className="form-control"
+            <label for="exampleFormControlSelect1">Prix</label>
+            <input
+              className="form-control"
               require
               type="text"
               name="price"
@@ -345,43 +228,47 @@ class AddArticle extends Component {
               placeholder="Prix"
             />
           </div>
-          
-        <div className="form-group list-unstyled">
-        <label for="exampleFormControlSelect1">Etat</label>
-          <div>
-            <select className="form-control" id="exampleFormControlSelect1"
-              require
-              type="text"
-              name="states"
-              onChange={this.handleChangeSelect}
-              placeholder="Etat…"
-            >
-              <option>Sélectionnez un état</option>
-              {this.state.stateList &&
-                this.state.stateList.map(data => (
-                  <option value={data.id}>{data.name}</option>
-                ))}
-            </select>
-            {this.state.states.map(card => {
-              return (
-                <li className="listElements">
-                  {card.name}
-                  <button
-                    className="btn btn-light my-2 mx-2"
-                    onClick={() => this.handleClickStat(card)}
-                  >
-                    X
-                  </button>
-                </li>
-              );
-            })}
-          </div>
+
+          <div className="form-group list-unstyled">
+            <label for="exampleFormControlSelect1">Etat</label>
+            <div>
+              <select
+                className="form-control"
+                id="exampleFormControlSelect1"
+                require
+                type="text"
+                name="states"
+                onChange={this.handleChangeSelect}
+                placeholder="Etat…"
+              >
+                <option>Sélectionnez un état</option>
+                {this.state.stateList &&
+                  this.state.stateList.map(data => (
+                    <option value={data.id}>{data.name}</option>
+                  ))}
+              </select>
+              {this.state.states.map(card => {
+                return (
+                  <li className="listElements">
+                    {card.name}
+                    <button
+                      className="btn btn-light my-2 mx-2"
+                      onClick={() => this.handleClickStat(card)}
+                    >
+                      X
+                    </button>
+                  </li>
+                );
+              })}
+            </div>
           </div>
 
           <div className="form-group list-unstyled">
             <label for="exampleFormControlSelect1">Catégorie</label>
 
-            <select className="form-control" id="exampleFormControlSelect1"
+            <select
+              className="form-control"
+              id="exampleFormControlSelect1"
               require
               type="checkbox"
               name="categories"
@@ -389,7 +276,7 @@ class AddArticle extends Component {
               onChange={this.handleChangeSelect}
             >
               <option>Sélectionnez une catégorie</option>
-              {this.state.categoriesList.map((data) => (
+              {this.state.categoriesList.map(data => (
                 <option value={data.id}>{data.name}</option>
               ))}
             </select>
@@ -406,50 +293,51 @@ class AddArticle extends Component {
                 </li>
               );
             })}
-          
-          </div>          
-
+          </div>
 
           <div className="form-group list-unstyled">
             <label for="exampleFormControlSelect1">Sous-catégorie</label>
 
-            <select className="form-control"
+            <select
+              className="form-control"
               require
               type="text"
               name="subcategories"
               placeholder="Enter your address"
               onChange={this.handleChangeSelect}
-            ><option>Sélectionnez une sous-catégorie</option>
-            {this.state.subcategoriesList &&
-              this.state.subcategoriesList.map(data => (
-                <option value={data.id}>{data.name}</option>
-              ))}
-          </select>
-          {this.state.subcategories.map(card => {
-            return (
-              <li className="listElements">
-                {card.name}
-                <button
-                  className="btn btn-light my-2 mx-2"
-                  onClick={() => this.handleClickSub(card)}
-                >
-                  X
-                </button>
-              </li>
-            );
-          })}
+            >
+              <option>Sélectionnez une sous-catégorie</option>
+              {this.state.subcategoriesList &&
+                this.state.subcategoriesList.map(data => (
+                  <option value={data.id}>{data.name}</option>
+                ))}
+            </select>
+            {this.state.subcategories.map(card => {
+              return (
+                <li className="listElements">
+                  {card.name}
+                  <button
+                    className="btn btn-light my-2 mx-2"
+                    onClick={() => this.handleClickSub(card)}
+                  >
+                    X
+                  </button>
+                </li>
+              );
+            })}
           </div>
 
           <div className="form-group list-unstyled">
             <label for="exampleFormControlSelect1">Age</label>
-            <select className="form-control"
+            <select
+              className="form-control"
               require
               type="text"
               name="ages"
               placeholder="Enter your address"
               onChange={this.handleChangeSelect}
             >
-             <option>Sélectionnez un age</option>
+              <option>Sélectionnez un age</option>
               {this.state.agesList &&
                 this.state.agesList.map(data => (
                   <option value={data.id}>{data.age}</option>
@@ -468,49 +356,58 @@ class AddArticle extends Component {
                 </li>
               );
             })}
-            </div>
-
-            <div className="form-group list-unstyled">
-            <label for="exampleFormControlSelect1">Sexe</label>
-            <select className="form-control"
-          require
-            type="text"
-            name="genders"
-            onChange={this.handleChangeSelect}
-          >
-            <option>Sélectionnez un sexe</option>
-          {this.state.gendersList &&
-            this.state.gendersList.map(data => (
-              <option value={data.id}>{data.gender}</option>
-            ))}
-        </select>
-        {this.state.genders.map(card => {
-          return (
-            <li className="listElements">
-              {card.gender}
-              <button
-                className="btn btn-light my-2 mx-2"
-                onClick={() => this.handleClickGen(card)}
-              >
-                X
-              </button>
-            </li>
-          );
-        })}
           </div>
 
           <div className="form-group list-unstyled">
-          <label for="exampleFormControlSelect1">Photo</label>
-            <input className="form-control"
-            type="url"
-            name="id_photoart"
-            onChange={this.handleChange}
-            placeholder="Copier l'url de la photo"
-          />
+            <label for="exampleFormControlSelect1">Sexe</label>
+            <select
+              className="form-control"
+              require
+              type="text"
+              name="genders"
+              onChange={this.handleChangeSelect}
+            >
+              <option>Sélectionnez un sexe</option>
+              {this.state.gendersList &&
+                this.state.gendersList.map(data => (
+                  <option value={data.id}>{data.gender}</option>
+                ))}
+            </select>
+            {this.state.genders.map(card => {
+              return (
+                <li className="listElements">
+                  {card.gender}
+                  <button
+                    className="btn btn-light my-2 mx-2"
+                    onClick={() => this.handleClickGen(card)}
+                  >
+                    X
+                  </button>
+                </li>
+              );
+            })}
           </div>
-          <button className="btn btn-success mb-5 submitButton" type="submit"  value="Add">Ajouter</button>
 
-          
+          <div className="form-group list-unstyled">
+            <label for="exampleFormControlSelect1">Photo</label>
+            <input
+              className="form-control"
+              type="url"
+              name="id_photoart"
+              onChange={this.handleChange}
+              placeholder="Copier l'url de la photo"
+            />
+          </div>
+          <button
+            onClick={() => {
+              alert("Votre Article a bien été ajouté");
+            }}
+            className="btn btn-success mb-5 submitButton"
+            type="submit"
+            value="Add"
+          >
+            Ajouter
+          </button>
         </form>
       </div>
     );

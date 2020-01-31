@@ -10,11 +10,13 @@
 	align-content: center;
 	justify-content: center;
 	font-family: "RobotoMedium";
+	width: 200%;
+	margin:auto;
+	margin-top: 3.5%;
 }
 
 .menu {
 	display: flex;
 	font-family: "RobotoMedium";
-	margin-top: 60px;
 	justify-content: center;
 }

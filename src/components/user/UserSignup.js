@@ -9,7 +9,7 @@ class UserSignup extends Component {
     lastname: "",
     mail: "",
     mobile: "",
-    address: "",
+    location: "",
     password: "",
     photo_user: "",
   };
@@ -18,6 +18,8 @@ class UserSignup extends Component {
   handleChange = (event) =>  {
     this.setState({[event.target.name]: event.target.value });
   }
+
+  /////AXIOS
   ///////AXIOS PUT USER /////////
   handleSubmit = e => {
     fetch("/adduser/signup", {
@@ -28,11 +30,16 @@ class UserSignup extends Component {
         "Content-Type": "application/json"
       }
     })
-      .then(res => res.json())
+      .then(res =>{
+        console.log(res.headers);
+        
+      return  res.json()
+      })
       .then(
         res => this.setState({ flash: res.flash }),
         err => this.setState({ flash: err.flash })
-      );
+      )
+      .then(res => res.headers)
     e.preventDefault();
   };
 
@@ -42,7 +49,7 @@ class UserSignup extends Component {
       <div className="containerSettingsSignUp">
         <img src={Logo} className="logoK" alt="Logo Kidicolo" />
         <form className="formClassSignUp" onSubmit={this.handleSubmit}>
-        <img src = {this.state.photo_user} className="photoProfilUser" />
+        <img src = {this.state.photo_user} className="photoProfilUser" placeholder="lol" />
         
           <input
             className='inputSignUp'
@@ -87,7 +94,7 @@ class UserSignup extends Component {
           <input
             className='inputSignUp'
             type="text"
-            name="address"
+            name="location"
             onChange={this.handleChange}
             placeholder="Adresse…"
           />
@@ -101,8 +108,8 @@ class UserSignup extends Component {
           />
           
           <div className="containerBtnSignUp">
-            <input className="btnSeconnecterSignUp" type="submit" value="Se connecter" />
-            <Link to="/"><button className="btnSeconnecterjaiCompte">J'ai un compte</button></Link>
+            <input className="btnSeconnecterSignUp" type="submit" value="Valider" />
+            <Link to="/userlogin"><button className="btnSeconnecterjaiCompte">J'ai un compte</button></Link>
           </div>
         </form>
       </div>

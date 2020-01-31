@@ -3,12 +3,11 @@ import "./DisplaySub.css";
 
 
 const DisplaySub = ({ subcategorys, handleChange }) => {
-  const id = subcategorys;
   return (
-    <div className="main-container">
+    <div className="main-container mx-auto my-5 mx-5">
       <div className="form-group dropmenu">
         <select
-          className="custom-select text-center menu ml-auto mr-auto"
+          className="custom-select text-center menu"
           name="category"
           onChange={(e) => handleChange(e.target.value)}
           >

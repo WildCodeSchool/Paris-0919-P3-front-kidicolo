@@ -16,6 +16,7 @@ import DisplayArticle from "./components/articles/DisplayArticle"
 import "./App.css";
 
 const App = () => {
+
   return (
     <div className="App">
       <BrowserRouter>
