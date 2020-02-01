@@ -1,6 +1,5 @@
-import React  from "react";
+import React from "react";
 import "./DisplaySub.css";
-
 
 const DisplaySub = ({ subcategorys, handleChange }) => {
   return (
@@ -9,8 +8,8 @@ const DisplaySub = ({ subcategorys, handleChange }) => {
         <select
           className="custom-select text-center menu"
           name="category"
-          onChange={(e) => handleChange(e.target.value)}
-          >
+          onChange={e => handleChange(e.target.value)}
+        >
           <option selected>Sélectionner une catégorie</option>
           {subcategorys &&
             subcategorys.map(subCat => {
@@ -22,7 +21,6 @@ const DisplaySub = ({ subcategorys, handleChange }) => {
             })}
         </select>
       </div>
-
     </div>
   );
 };

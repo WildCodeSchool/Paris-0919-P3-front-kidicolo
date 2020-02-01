@@ -11,16 +11,14 @@ import Homepage from "./components/homepage/Homepage";
 import Categorie from "./components/category/Categorie";
 import DisplaySub from "./components/category/DisplaySub";
 import AddArticle from "./components/articles/AddArticle";
-import DisplayArticle from "./components/articles/DisplayArticle"
+import DisplayArticle from "./components/articles/DisplayArticle";
 //Import css
 import "./App.css";
 
 const App = () => {
-
   return (
     <div className="App">
       <BrowserRouter>
-      
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/settingsuser" component={UserSettings} />
