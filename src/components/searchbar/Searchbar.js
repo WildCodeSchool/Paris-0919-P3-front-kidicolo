@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/img/logo/Logo_Transparant4.png";
+
 import "./Searchbar.css";
 
 const Searchbar = ({ searchChange }) => {

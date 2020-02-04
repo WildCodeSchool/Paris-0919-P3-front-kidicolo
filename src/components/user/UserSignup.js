@@ -37,7 +37,7 @@ class UserSignup extends Component {
         res => this.setState({ flash: res.flash }),
         err => this.setState({ flash: err.flash })
       )
-      .then(res => res.headers);
+      alert("Votre compte à bien été créé ")
     e.preventDefault();
   };
 
@@ -54,6 +54,7 @@ class UserSignup extends Component {
           />
 
           <input
+          required
             className="inputSignUp"
             onChange={this.handleChange}
             placeholder="Prénom…"
@@ -62,6 +63,7 @@ class UserSignup extends Component {
           />
 
           <input
+          required
             className="inputSignUp"
             type="text"
             name="lastname"
@@ -70,14 +72,16 @@ class UserSignup extends Component {
           />
 
           <input
+          required
             className="inputSignUp"
-            type="text"
+            type="email"
             name="mail"
             onChange={this.handleChange}
             placeholder="Email…"
           />
 
           <input
+          required
             className="inputSignUp"
             type="password"
             name="password"
@@ -86,6 +90,7 @@ class UserSignup extends Component {
           />
 
           <input
+          required
             className="inputSignUp"
             type="text"
             name="mobile"
@@ -94,6 +99,7 @@ class UserSignup extends Component {
           />
 
           <input
+          required
             className="inputSignUp"
             type="text"
             name="location"
@@ -102,6 +108,7 @@ class UserSignup extends Component {
           />
 
           <input
+          required
             className="inputSignUp"
             type="text"
             name="photo_user"

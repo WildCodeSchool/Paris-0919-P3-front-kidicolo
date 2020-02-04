@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { withRouter } from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 import axios from "axios";
-import "./usercss/UserSettings.css"
+import "./usercss/UserSettings.css";
 
 class UserSettings extends Component {
   state = {
@@ -11,12 +11,12 @@ class UserSettings extends Component {
     mobile: "",
     address: "",
     password: "",
-    photo_user: "",
+    photo_user: ""
   };
   /////////AXIOS GET USER /////////
   getUser() {
-    axios.get(`/adduser/getinfo/21`).then(res => {
-      this.setState({...res.data[0] });
+    axios.get(`/adduser/getinfo/1`).then(res => {
+      this.setState({ ...res.data[0] });
     });
   }
 
@@ -25,9 +25,9 @@ class UserSettings extends Component {
   }
 
   ////////////FONCTION POUR RECUP LA VALUE DE NAME PUIS STOCKER DS LA STATE ////////////
-  handleChange = (event) =>  {
-    this.setState({[event.target.name]: event.target.value });
-  }
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
   ///////AXIOS PUT USER /////////
   handleSubmit = e => {
     fetch("/adduser/switch/21", {
@@ -51,7 +51,7 @@ class UserSettings extends Component {
     return (
       <div className="containerSettings">
         <form className="formClass" onSubmit={this.handleSubmit}>
-        Fisrtname:
+          Fisrtname:
           <input
             onChange={this.handleChange}
             placeholder="Your Firstname"
@@ -107,7 +107,7 @@ class UserSettings extends Component {
             onChange={this.handleChange}
             placeholder="Enter the url of the photo"
           />
-          <img src = {this.state.photo_user}  alt="photouser"/>
+          <img src={this.state.photo_user} alt="photouser" />
           <input className="submitButton" type="submit" value="Soumettre" />
         </form>
       </div>

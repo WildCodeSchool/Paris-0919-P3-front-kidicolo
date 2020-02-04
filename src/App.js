@@ -12,6 +12,8 @@ import Categorie from "./components/category/Categorie";
 import DisplaySub from "./components/category/DisplaySub";
 import AddArticle from "./components/articles/AddArticle";
 import DisplayArticle from "./components/articles/DisplayArticle";
+import requireAuth from "./components/user/requireAuth";
+import requireNotAuth from './components/user/requireNotAuth'
 //Import css
 import "./App.css";
 
@@ -21,10 +23,10 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route path="/settingsuser" component={UserSettings} />
+          <Route path="/userlogin" component={requireNotAuth(UserLogin)} />
+          <Route path="/settingsuser" component={requireAuth(UserSettings)} />
           <Route path="/usersignup" component={UserSignup} />
-          <Route path="/user" component={User} />
-          <Route path="/userlogin" component={UserLogin} />
+          <Route path="/user" component={requireAuth(User)} />
           <Route path="/categorie/:id" component={Categorie} />
           <Route path="/subcategorie/:id" component={DisplaySub} />
           <Route path="/displayarticle/:id" component={DisplayArticle} />

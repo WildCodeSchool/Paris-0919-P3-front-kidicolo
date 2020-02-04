@@ -177,7 +177,7 @@ class AddArticle extends Component {
     return (
       <div className="containerSettings">
         <img src={Logo} className="logoK" alt="Logo Kidicolo" />
-        <form onSubmit={this.handleSubmit} className="container">
+        <form onSubmit={this.handleSubmit} className="container mx-auto">
           <h3 className="titreAjoutArticle">Ajouter un article</h3>
           <div className="form-group">
             <label for="exampleFormControlSelect1">Nom</label>
@@ -402,7 +402,7 @@ class AddArticle extends Component {
             onClick={() => {
               alert("Votre Article a bien été ajouté");
             }}
-            className="btn btn-success mb-5 submitButton"
+            className="btn btn-success submitButton"
             type="submit"
             value="Add"
           >

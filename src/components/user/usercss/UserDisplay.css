@@ -6,7 +6,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(0.25turn,#e50f51,#662381);
     height: 75vh;
     width: 90vw;
     margin: auto;
@@ -63,8 +62,11 @@
 
 .logoKidicolo{
 height: 22%;
-width: 70%;
-position: absolute;
-bottom: 83%;
+width: 30%;
+margin-right: 30%;
+}
+.container{
+    margin-left: 30%;
+    height:100vh;
 }
 
