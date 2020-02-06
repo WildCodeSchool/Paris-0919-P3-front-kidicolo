@@ -1,33 +1,34 @@
 import React from "react";
 import "./usercss/UserDisplay.css";
 import { Link } from "react-router-dom";
-import logo from "../../assets/img/homepage/logo.png";
+import Logo from "../../assets/img/logo/Logo_Transparant4.png";
 
 const UserDisplay = users => {
   return (
+    <div className= 'containerPageUserDisplay'>
+    <div className='containerCardProfil '>
+      <img src={Logo} className="logoK" alt="Logo Kidicolo" />
 
-    <div>
-          <img className="logoKidicolo" src={logo} />
-
-        <img
-          class="imgUserProfile"
-          src={users.users.photo_user}
-          alt="Card image cap"
-        />
-        <div class="">
-          <h1 class="">
-            {users.users.firstname} {users.users.lastname}{" "}
-          </h1>
-          <div className="buttonUserProfile">
-            <Link to="/settingsuser">
-              <button className="btn btn-info"> Seetings</button>
-            </Link>
-            <Link to="/userarticle">
-              <button className=" btn btn-info">My Dressing</button>
-            </Link>
-          </div>
+      <img
+        className="imgUserProfile"
+        src={users.users.photo_user}
+        alt="Card image cap"
+      />
+      <div className="">
+        <h1 className="nameUser">
+          {users.users.firstname} {users.users.lastname}{" "}
+        </h1>
+        <div className="buttonUserProfile">
+          <Link to="/settingsuser">
+            <button className="btn p-3 btn-dark">Paramètres</button>
+          </Link>
+          <Link to="/userarticle">
+            <button className=" btn p-3 btn-info">Mes articles</button>
+          </Link>
         </div>
       </div>
+    </div>
+    </div>
   );
 };
 

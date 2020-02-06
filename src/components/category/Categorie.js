@@ -68,6 +68,30 @@ class Categorie extends Component {
 
   componentDidMount() {
     this.getSubcategory();
+    const {
+      match: { params }
+    } = this.props;
+    let url = 0;
+
+    switch (params.id) {
+      case "Vetements":
+        url = 3;
+        break;
+      case "Puericulture":
+        url = 1;
+        break;
+      case "Jeux & Jouets":
+        url = 2;
+        break;
+      case "Education":
+        url = 4;
+        break;
+      default:
+        console.log("Badest things");
+    }
+    axios.get(`/article/category/${url}`).then(res => {
+      this.setState({ articles : res.data });
+    });
   }
   render() {
     const { subcategory, articles } = this.state;
@@ -80,21 +104,16 @@ class Categorie extends Component {
         />
         <div className="searchBar">
           <SearchBar searchChange={this.onSearchChange} />
-          {/* {this.state.article.map((elem, i) => <p key={i}>{elem.name}</p>)} */}
-
           <DisplaySub
             subcategorys={subcategory}
             handleChange={this.handleChange}
           />
         </div>
-
-        <div className="container">
-          <div className="row mx-auto my-5">
-            {articles &&
-              articles.map(article => {
-                return <DisplayArticle article={article} />;
-              })}
-          </div>
+        <div className="row mx-auto my-5">
+          {articles &&
+            articles.map(article => {
+              return <DisplayArticle article={article} />;
+            })}
         </div>
       </div>
     );

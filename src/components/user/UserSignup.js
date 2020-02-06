@@ -18,6 +18,16 @@ class UserSignup extends Component {
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
+ ////FONCTION POUR  VALIDER LE PASSWORD////
+  validatePassword = () => {
+    const password = document.getElementById("password")
+    const passwordbis = document.getElementById("passwordbis");
+    if (password.value !== passwordbis.value) {            // value={null}
+      passwordbis.setCustomValidity("Le mot de passe de correspond pas");
+    } else {
+      passwordbis.setCustomValidity('');
+    }
+  }
 
   /////AXIOS
   ///////AXIOS PUT USER /////////
@@ -36,8 +46,8 @@ class UserSignup extends Component {
       .then(
         res => this.setState({ flash: res.flash }),
         err => this.setState({ flash: err.flash })
-      )
-      alert("Votre compte à bien été créé ")
+      );
+    alert("Votre compte à bien été créé ");
     e.preventDefault();
   };
 
@@ -50,11 +60,11 @@ class UserSignup extends Component {
           <img
             src={this.state.photo_user}
             className="photoProfilUser"
-            placeholder="lol"
+            placeholder="Photo de profil ..."
           />
 
           <input
-          required
+            required
             className="inputSignUp"
             onChange={this.handleChange}
             placeholder="Prénom…"
@@ -63,7 +73,7 @@ class UserSignup extends Component {
           />
 
           <input
-          required
+            required
             className="inputSignUp"
             type="text"
             name="lastname"
@@ -72,7 +82,7 @@ class UserSignup extends Component {
           />
 
           <input
-          required
+            required
             className="inputSignUp"
             type="email"
             name="mail"
@@ -81,25 +91,36 @@ class UserSignup extends Component {
           />
 
           <input
-          required
+            id="password"
             className="inputSignUp"
             type="password"
             name="password"
-            onChange={this.handleChange}
+            onChange={(this.handleChange, this.validatePassword)}
             placeholder="Mot de passe…"
+            required
           />
 
           <input
-          required
+            id="passwordbis"
+            className="inputSignUp"
+            type="password"
+            name="passwordbis"
+            onKeyUp={this.validatePassword}
+            placeholder="Confirmation du mot de passe…"
+            required
+          />
+
+          <input
+            required
             className="inputSignUp"
             type="text"
             name="mobile"
             onChange={this.handleChange}
-            placeholder="Numéro de Portable…"
+            placeholder="Mobile number…"
           />
 
           <input
-          required
+            required
             className="inputSignUp"
             type="text"
             name="location"
@@ -108,12 +129,12 @@ class UserSignup extends Component {
           />
 
           <input
-          required
+            required
             className="inputSignUp"
             type="text"
             name="photo_user"
             onChange={this.handleChange}
-            placeholder="URL Photo de profil…"
+            placeholder="Your photo(URL)…"
           />
 
           <div className="containerBtnSignUp">

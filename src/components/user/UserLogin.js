@@ -7,10 +7,9 @@ import axios from "axios";
 class UserLogin extends Component {
   state = {
     mail: "",
-    password: ""
+    password: "",
   };
 
-  ////LocalStorage///
 
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
@@ -21,9 +20,9 @@ class UserLogin extends Component {
       mail: this.state.mail,
       password: this.state.password
     };
-    axios.post("adduser/login", user).then(res => {
-      localStorage.setItem('token', res.headers.token) // requireAuth et notNoth
-      console.log('resheader', res.headers);
+    axios.post("adduser/login", user)
+    .then(res => {
+      localStorage.setItem("token", res.headers.token); // requireAuth et notNoth
       document.location.reload(true);
     });
     e.preventDefault();
@@ -50,13 +49,13 @@ class UserLogin extends Component {
             onChange={this.handleChange}
             placeholder="Your Password"
           />
-            <button
-              onClick={this.handleSubmit}
-              type="submit"
-              className="btnSeconnecter"
-            >
-              Se connecter !
-            </button>
+          <button
+            onClick={this.handleSubmit}
+            type="submit"
+            className="btnSeconnecter"
+          >
+            Se connecter !
+          </button>
           <Link to="/usersignup">
             <button className="btnPasDeCompte"> Je n'ai pas de compte ?</button>
           </Link>

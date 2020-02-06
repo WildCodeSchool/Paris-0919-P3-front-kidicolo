@@ -6,13 +6,6 @@
     src:url("../../../src/assets/fonts/Quantify-Bold.ttf");} 
     
     
-/* @font-face{font-family: "RobotoMedium" ;
-    src:url("../../../assets/fonts/Roboto-Medium.ttf");}
-
-@font-face{font-family: "RobotoLight" ;
-    src:url("../../../assets/fonts/Roboto-Light.ttf");}
-  */
-
 
 .mainContainer {
     
@@ -42,7 +35,7 @@
 }
 
 .box0:hover {
-
+text-decoration: none;
 box-shadow: inset 0px 0px 7px 4px rgba(51, 87, 58, 0.7);
 -moz-box-shadow: inset 0px 0px 7px 4px rgba(51, 87, 58, 0.7);
 -webkit-box-shadow: inset 0px 0px 7px 4px rgba(51, 87, 58, 0.7);
@@ -78,7 +71,7 @@ box-shadow: inset 0px 0px 7px 4px rgba(51, 87, 58, 0.7);
 }
 
 .box1:hover {
-
+    text-decoration: none;
     box-shadow: inset 0px 0px 7px 4px rgba(194, 74, 74, 0.7);
     -moz-box-shadow: inset 0px 0px 7px 4px rgba(194, 74, 74, 0.7);
     -webkit-box-shadow: inset 0px 0px 7px 4px rgba(194, 74, 74, 0.7);
@@ -112,7 +105,7 @@ box-shadow: inset 0px 0px 7px 4px rgba(51, 87, 58, 0.7);
 }
 
 .box2:hover {
-
+    text-decoration: none;
     box-shadow: inset 0px 0px 7px 4px rgba(152, 79, 50, 0.7);
     -moz-box-shadow: inset 0px 0px 7px 4px rgba(152, 79, 50, 0.7);
     -webkit-box-shadow: inset 0px 0px 7px 4px rgba(152, 79, 50, 0.7);
@@ -145,7 +138,7 @@ box-shadow: inset 0px 0px 7px 4px rgba(51, 87, 58, 0.7);
 }
 
 .box3:hover {
-
+    text-decoration: none;
     box-shadow: inset 0px 0px 7px 4px rgba(78, 98, 118, 0.7);
     -moz-box-shadow: inset 0px 0px 7px 4px rgba(78, 98, 118, 0.7);
     -webkit-box-shadow: inset 0px 0px 7px 4px rgba(78, 98, 118, 0.7);

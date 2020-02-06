@@ -55,6 +55,7 @@
 }
 
 .btnSeconnecter:active {
+    text-decoration: none;
     font-family: "RobotoLight";
     background-color: #662381;
     color: #ffffff;
@@ -76,9 +77,11 @@
     display: flex;
     justify-content: center;
     margin: auto; 
+    text-decoration: none;
 }
 
 .btnPasDeCompte:active {
+    text-decoration: none;
     font-family: "RobotoLight";
     background-color: #662381;
     color: #ffffff;

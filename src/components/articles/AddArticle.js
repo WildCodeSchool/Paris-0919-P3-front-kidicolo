@@ -399,9 +399,6 @@ class AddArticle extends Component {
             />
           </div>
           <button
-            onClick={() => {
-              alert("Votre Article a bien été ajouté");
-            }}
             className="btn btn-success submitButton"
             type="submit"
             value="Add"

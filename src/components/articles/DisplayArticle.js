@@ -17,7 +17,6 @@ const DisplayArticle = ({ article }) => {
     <div className="card my-3 mx-3">
       <img className="card-img-top" src={photo} alt="Card cap" />
       <div className="card-body d-flex flex-column">
-        {/* <p>{article.id_user_vendeur}</p> */}
         <p className="card-text ">{article.brand}</p>
         <h5 className="card-title">{article.name}</h5>
         <p className="card-text">{article.description}</p>
